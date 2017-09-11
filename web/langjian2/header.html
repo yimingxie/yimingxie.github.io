@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+
+<!--首页顶部-->
+<div class="sec1-nav-contain">
+
+    <div class="sec1-nav clear">
+        <div class="sec1-nav-left clear">
+            <div class="sec1-logo"><a href="index.html"><img src="images/logo-red.png" alt=""></a></div>
+            <div class="sec1-nav-list">
+                <ul class="clear">
+                    <li class="sn-list sn-list1">
+                        <a class="sn-list-a" href="javascript:;">服务</a>
+                        <div class="sn-list-dark">
+                            <p><a href="plan.html#slide1">品牌咨询与管理</a></p>
+                            <p><a href="plan.html#slide2">品牌策划</a></p>
+                            <p><a href="plan.html#slide3">品牌视觉识别系统设计</a></p>
+                            <p><a href="plan.html#slide4">品牌体验设计</a></p>
+                            <p><a href="plan.html#slide5">品牌营销与推广</a></p>
+                        </div>
+                    </li>
+                    <li class="sn-list sn-list2">
+                        <a class="sn-list-a" href="javascript:;">案例欣赏</a>
+                        <div class="sn-list-dark">
+                            <p><a href="index.html#slide3">案例欣赏</a></p>
+                            <!--<p><a href="index.html#slide3">品牌</a></p>-->
+                            <!--<p><a href="index.html#slide3">包装</a></p>-->
+                            <!--<p><a href="index.html#slide3">网站</a></p>-->
+                            <!--<p><a href="index.html#slide3">APPS</a></p>-->
+                            <p><a href="index.html#slide3">合作伙伴</a></p>
+                        </div>
+                    </li>
+                    <li class="sn-list sn-list3">
+                        <a class="sn-list-a" href="javascript:;">更多</a>
+                        <div class="sn-list-dark">
+                            <p><a href="index.html#slide4">关于我们</a></p>
+                            <p><a href="index.html#slide4">核心价值</a></p>
+                            <p><a href="index.html#slide4">团队资源</a></p>
+                            <p><a href="index.html#slide4">核心成员</a></p>
+                            <p><a href="index.html#slide4">加入我们</a></p>
+                            <p><a href="index.html#slide4">集团新闻</a></p>
+                        </div>
+                    </li>
+                    <li class="sn-list sn-list4">
+                        <a class="sn-list-a" href="index.html#slide5">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sec1-nav-right clear">
+            <div class="sec1-search-icon"></div>
+            <div class="sec1-search-box clear">
+                <form action="">
+                    <input class="sec1-search-input" type="text" placeholder="搜索...">
+                    <input class="sec1-search-submit" type="submit" value="">
+                    <div class="sec-search-menu">
+                        <a href="#">品牌策划</a>
+                        <a href="#">品牌识别</a>
+                        <a href="#">品牌体验</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    $(function () {
+        //导航下拉显示
+        $('.sn-list').hover(function () {
+            $(this).find('.sn-list-dark').show();
+        }, function () {
+            $('.sn-list-dark').hide();
+        });
+
+        //鼠标悬停导航显示
+        $('.sec1-nav-contain').hover(function () {
+            $('.sec1-nav').stop().animate({top: "0"},300);
+        }, function () {
+            $('.sec1-nav').stop().animate({top: "-3.7rem"},300);
+            $('.sec1-search-icon').show();
+            $('.sec1-search-box').hide();
+            $('.sec1-search-input').removeClass('on');
+            $('.sec-search-menu a').removeClass('on');
+        });
+
+        //搜索栏关闭与展开
+        $('.sec1-search-icon').click(function (e) {
+            $('.sec1-search-icon').hide();
+            $('.sec1-search-box').show();
+            //搜索栏和下拉动效
+            setTimeout(function () {
+                $('.sec1-search-input').addClass('on');
+            },10);
+            setTimeout(function () {
+                $('.sec-search-menu a:eq(0)').addClass('on');
+            },10);
+            setTimeout(function () {
+                $('.sec-search-menu a:eq(1)').addClass('on');
+            },50);
+            setTimeout(function () {
+                $('.sec-search-menu a:eq(2)').addClass('on');
+            },100);
+            setTimeout(function () {
+                $('.sec-search-menu a:eq(3)').addClass('on');
+            },150);
+            setTimeout(function () {
+                $('.sec-search-menu a:eq(4)').addClass('on');
+            },200);
+
+            $(document).one("click", function(){
+                $('.sec1-search-icon').show();
+                $('.sec1-search-box').hide();
+                $('.sec1-search-input').removeClass('on');
+                $('.sec-search-menu a').removeClass('on');
+            });
+            e.stopPropagation();
+        });
+        $(".sec1-search-box").on("click", function(e) {
+            e.stopPropagation();
+        });
+
+
+
+        //首页导航栏描点切换2
+        $('.sn-list2 .sn-list-dark p a').click(function () {
+            var numNav2=$(this).parent().index();
+            //alert(numNav);
+            $(".title3-menu ul li:eq(" + numNav2 + ")").click();
+            $('.sn-list-dark').hide();
+        });
+        //首页导航栏描点切换3
+        $('.sn-list3 .sn-list-dark p a').click(function () {
+            var numNav3=$(this).parent().index();
+            //alert(numNav);
+            $(".hd-ul-content ul li:eq(" + numNav3 + ")").click();
+            $('.sn-list-dark').hide();
+        });
+
+
+
+
+    })
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

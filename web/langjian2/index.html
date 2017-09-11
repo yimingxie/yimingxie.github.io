@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="author" content="深圳方维网络科技有限公司  http://www.szfangwei.cn">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit"/>
+
+
+    <title>浪尖品牌</title>
+
+    <link rel="stylesheet" href="css/jquery.fullPage.css"/>
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <link rel="stylesheet" href="css/css-reset.css">
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!--[if lt IE 9]><link rel="stylesheet" href="css/ie-none.css"><![endif]-->
+
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/idangerous.swiper.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.2.js"></script>
+    <script src="js/basic.js"></script>
+
+    <!--<script src="js/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="js/hammer.min.js"></script>
+
+
+    <!--[if lt IE 9]><script src="js/html5.js" ></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/selectivizr-min.js" ></script><![endif]-->
+
+    <style>
+        /*仅用于首页*/
+        /*@media all and (max-width: 779px) and (max-height: 430px){*/
+            /*body{display: none;}*/
+            /*html{background: #333333 url('images/phoneNone.png') no-repeat center center;}*/
+        /*}*/
+    </style>
+
+    <script>
+
+        //接收值
+        function getValue() {
+
+            document.getElementById('txt').value=window.opener.document.getElementById('txtID').value;
+            var v=document.getElementById('txt').value;
+
+            window.opener.close();
+            //opener=null;
+            //跳到第三屏切换
+            if( v == "s2-1" ){
+                $('.title3-menu ul li:eq(0)').click();
+                window.opener.document.getElementById('txtID').value=0;
+            }else if( v == "s2-2" ){
+                $('.title3-menu ul li:eq(1)').click();
+                window.opener.document.getElementById('txtID').value=0;
+            }
+//            else if( v == "s2-3" ){
+//                $('.title3-menu ul li:eq(2)').click();
+//                window.opener.document.getElementById('txtID').value=0;
+//            }else if( v == "s2-4" ){
+//                $('.title3-menu ul li:eq(3)').click();
+//                window.opener.document.getElementById('txtID').value=0;
+//            }else if( v == "s2-5" ){
+//                $('.title3-menu ul li:eq(4)').click();
+//                window.opener.document.getElementById('txtID').value=0;
+//            }else if( v == "s2-6" ){
+//                $('.title3-menu ul li:eq(5)').click();
+//                window.opener.document.getElementById('txtID').value=0;
+//            }
+
+            if( v == "s3-1" ){
+                $('.hd-ul-content ul li:eq(0)').click();
+                window.opener.document.getElementById('txtID').value=0;
+            }else if( v == "s3-2" ){
+                $('.hd-ul-content ul li:eq(1)').click();
+                window.opener.document.getElementById('txtID').value=0;
+            }else if( v == "s3-3" ){
+                $('.hd-ul-content ul li:eq(2)').click();
+                window.opener.document.getElementById('txtID').value=0;
+            }else if( v == "s3-4" ){
+                $('.hd-ul-content ul li:eq(3)').click();
+                window.opener.document.getElementById('txtID').value=0;
+            }else if( v == "s3-5" ){
+                $('.hd-ul-content ul li:eq(4)').click();
+                window.opener.document.getElementById('txtID').value=0;
+            }else if( v == "s3-6" ){
+                $('.hd-ul-content ul li:eq(5)').click();
+                window.opener.document.getElementById('txtID').value=0;
+            }
+
+
+        }
+
+    </script>
+
+
+</head>
+<body onload="getValue();" style="overflow: hidden;">
+
+<!--接收值所用-->
+<input id='txt' style="display: none;" type='text' value="从子页面接收的值"/>
+
+
+
+<!--PC首页顶部，和内页顶部不同-->
+<header></header>
+
+<!--手机顶部-->
+<div class="iphone-header"></div>
+
+<!--PC右侧联系方式-->
+<div class="sidebar"></div>
+
+
+<!--主体-->
+<div id="dowebok">
+
+    <!--第一屏-->
+    <div class="section sec1" data-anchor="slide1">
+
+        <!--标题-->
+        <div class="sec1-title">
+
+            <!--中间雨滴-->
+            <div class="sec1-bg-mid">
+                <img src="images/sec1-bg-mid.png" alt=""/>
+                <img src="images/sec1-bg-mid.png" alt=""/>
+                <img src="images/sec1-bg-mid.png" alt=""/>
+                <img src="images/sec1-bg-mid.png" alt=""/>
+                <img src="images/sec1-bg-mid.png" alt=""/>
+                <img src="images/sec1-bg-mid.png" alt=""/>
+            </div>
+        </div>
+
+
+        <!--第一屏背景小块件-->
+        <div class="sec1-bg-round">
+            <img src="images/sec1-round.png" alt="" draggable="false"/>
+        </div>
+
+        <div class="sec1-bg-top1">
+            <img src="images/sec1-bg-top1.png" alt=""/>
+        </div>
+        <div class="sec1-bg-top2">
+            <img src="images/sec1-bg-top2.png" alt=""/>
+        </div>
+
+        <div class="sec1-bg-bot1">
+            <img src="images/sec1-bg-bot1.png" alt=""/>
+        </div>
+        <div class="sec1-bg-bot2">
+            <img src="images/sec1-bg-bot2.png" alt=""/>
+        </div>
+        <div class="sec1-bg-bot3">
+            <img src="images/sec1-bg-bot3.png" alt=""/>
+        </div>
+        <div class="sec1-bg-bot4">
+            <img src="images/sec1-bg-bot4.png" alt=""/>
+        </div>
+        <div class="sec1-bg-bot5">
+            <img src="images/sec1-bg-bot5.png" alt=""/>
+        </div>
+
+        <div class="sec1-bg-bot6 phone">
+            <img src="images/sec1-bg-bot6.png" alt=""/>
+        </div>
+        <div class="sec1-bg-bot7 phone">
+            <img src="images/sec1-bg-bot7.png" alt=""/>
+        </div>
+        <div class="sec1-bg-bot8 phone">
+            <img src="images/sec1-bg-bot8.png" alt=""/>
+        </div>
+        <div class="sec1-bg-bot9 phone">
+            <img src="images/sec1-bg-bot9.png" alt=""/>
+        </div>
+        <div class="sec1-bg-bot10 phone">
+            <img src="images/sec5-bg-left2.png" alt=""/>
+        </div>
+
+        <div class="sec1-bg-down-round sc1-round">
+            <a href="index.html#slide2"><img src="images/down-arrow-round.png" alt=""/></a>
+        </div>
+
+
+        <!--第一屏背景小块件结束-->
+
+
+    </div>
+
+
+    <!--第二屏-->
+    <div class="section" data-anchor="slide2" style="">
+
+        <!--主体显示内容-->
+        <div class="sec2">
+
+            <div class="sec2-wrap">
+
+                <div class="wrap">
+                    <div class="title2-top">
+                        <img src="images/title2-top-img.png" alt=""/>
+                        <p>我 们 能 为 您 做 什 么</p>
+                    </div>
+
+                    <div class="title2-content">
+                        <p>我们　致力于</p>
+                        <p><i>通过自有的一套完整的落地执行系统，</i><em class="t2c-em">实现品牌从无到有、从有到优的结果！</em></p>
+                        <div class="title2-content-bot">
+                            <span>From　EBCDA　to　ABCDE</span><span>45231　to　12345</span>
+                        </div>
+                    </div>
+
+                    <div class="t2-box-c clear">
+                        <!--盒子-->
+                        <div class="t2-box">
+                            <a href="plan.html#slide1">
+                                <div class="t2-box-img">
+                                    <div class="t2-box-arrow"></div>
+                                    <div class="t2-cl"></div>
+                                    <div class="t2-cr"></div>
+                                    <div class="t2-box-icon-new on">
+                                        <!--<img src="images/box-icon5.png" alt=""/>-->
+                                        <!--<img src="images/box-icon5-on.png" alt=""/>-->
+                                        <div class="t2-box-cc clear">
+                                            <img src="images/box-icon6.png" alt=""/><img src="images/box-icon6-on.png" alt=""/>
+                                        </div>
+                                    </div>
+                                    <!--<div class="t2-box-icon">-->
+                                    <!--<div class="t2-box-cc clear">-->
+                                    <!--<img src="images/box-icon5.png" alt=""/><img src="images/box-icon5-on.png" alt=""/>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                                <div class="t2-box-p">
+                                    <h3>品 牌 咨 询 与 管 理</h3>
+                                    <p>Brand Consulting & Management</p>
+                                </div>
+                                <!--遮罩-->
+                                <div class="t2-box-dark"></div>
+                            </a>
+                        </div>
+
+                        <!--盒子-->
+                        <div class="t2-box">
+                            <a href="plan.html#slide2">
+                                <div class="t2-box-img">
+                                    <div class="t2-box-arrow"></div>
+                                    <div class="t2-cl"></div>
+                                    <div class="t2-cr"></div>
+                                    <div class="t2-box-icon-new on">
+                                        <!--<div class="tbin-c">-->
+                                        <!--<img src="images/box-icon1.png" alt=""/><img src="images/box-icon1-on.png" alt=""/>-->
+                                        <!--</div>-->
+                                        <div class="t2-box-cc clear">
+                                            <img src="images/box-icon1.png" alt=""/><img src="images/box-icon1-on.png" alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="t2-box-p">
+                                    <h3>品 牌 策 划</h3>
+                                    <p>Brand Planning</p>
+                                </div>
+                                <!--遮罩-->
+                                <div class="t2-box-dark"></div>
+                            </a>
+                        </div>
+                        <!--盒子-->
+                        <div class="t2-box">
+                            <a href="plan.html#slide3">
+                                <div class="t2-box-img">
+                                    <div class="t2-box-arrow"></div>
+                                    <div class="t2-cl"></div>
+                                    <div class="t2-cr"></div>
+                                    <div class="t2-box-icon-new on">
+                                        <!--<img src="images/box-icon2.png" alt=""/>-->
+                                        <!--<img src="images/box-icon2-on.png" alt=""/>-->
+                                        <div class="t2-box-cc clear">
+                                            <img src="images/box-icon2.png" alt=""/><img src="images/box-icon2-on.png" alt=""/>
+                                        </div>
+                                    </div>
+                                    <!--<div class="t2-box-icon">-->
+                                    <!--<div class="t2-box-cc clear">-->
+                                    <!--<img src="images/box-icon2.png" alt=""/><img src="images/box-icon2-on.png" alt=""/>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                                <div class="t2-box-p">
+                                    <h3>品 牌 视 觉 识 别 系 统 设 计</h3>
+                                    <p>Brand VIS Design</p>
+                                </div>
+                                <!--遮罩-->
+                                <div class="t2-box-dark"></div>
+                            </a>
+                        </div>
+                        <!--盒子-->
+                        <div class="t2-box">
+                            <a href="plan.html#slide4">
+                                <div class="t2-box-img">
+                                    <div class="t2-box-arrow"></div>
+                                    <div class="t2-cl"></div>
+                                    <div class="t2-cr"></div>
+                                    <div class="t2-box-icon-new on">
+                                        <!--<img src="images/box-icon3.png" alt=""/>-->
+                                        <!--<img src="images/box-icon3-on.png" alt=""/>-->
+                                        <div class="t2-box-cc clear">
+                                            <img src="images/box-icon3.png" alt=""/><img src="images/box-icon3-on.png" alt=""/>
+                                        </div>
+                                    </div>
+                                    <!--<div class="t2-box-icon">-->
+                                    <!--<div class="t2-box-cc clear">-->
+                                    <!--<img src="images/box-icon3.png" alt=""/><img src="images/box-icon3-on.png" alt=""/>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                                <div class="t2-box-p">
+                                    <h3>品 牌 体 验 设 计</h3>
+                                    <p>Brand Experience Design</p>
+                                </div>
+                                <!--遮罩-->
+                                <div class="t2-box-dark"></div>
+                            </a>
+                        </div>
+                        <!--盒子-->
+                        <div class="t2-box">
+                            <a href="plan.html#slide5">
+                                <div class="t2-box-img">
+                                    <div class="t2-box-arrow"></div>
+                                    <div class="t2-cl"></div>
+                                    <div class="t2-cr"></div>
+                                    <div class="t2-box-icon-new on">
+                                        <!--<img src="images/box-icon4.png" alt=""/>-->
+                                        <!--<img src="images/box-icon4-on.png" alt=""/>-->
+                                        <div class="t2-box-cc clear">
+                                            <img src="images/box-icon4.png" alt=""/><img src="images/box-icon4-on.png" alt=""/>
+                                        </div>
+                                    </div>
+                                    <!--<div class="t2-box-icon">-->
+                                    <!--<div class="t2-box-cc clear">-->
+                                    <!--<img src="images/box-icon4.png" alt=""/><img src="images/box-icon4-on.png" alt=""/>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                                <div class="t2-box-p">
+                                    <h3>品 牌 营 销 与 推 广</h3>
+                                    <p>Brand Marketing & Promotion</p>
+                                </div>
+                                <!--遮罩-->
+                                <div class="t2-box-dark"></div>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--第二屏背景小块-->
+            <div class="sec2-bg-left1">
+                <img src="images/sec1-round.png" alt=""/>
+            </div>
+
+            <div class="sec2-bg-left2-1">
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+            </div>
+            <div class="sec2-bg-left2-2">
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+                <img src="images/sec2-bg-left2-1.png" alt=""/>
+            </div>
+
+
+            <div class="sec2-bg-mid">
+                <img src="images/sec2-bg-mid.png" alt=""/>
+            </div>
+
+            <div class="sec2-bg-right1">
+                <img src="images/sec2-bg-right1.png" alt=""/>
+            </div>
+            <div class="sec2-bg-right2">
+                <img src="images/sec2-bg-right2.png" alt=""/>
+            </div>
+            <div class="sec2-bg-right3">
+                <img src="images/sec2-bg-right3.png" alt=""/>
+            </div>
+            <div class="sec2-bg-right4">
+                <img src="images/sec2-bg-right4.png" alt=""/>
+            </div>
+            <div class="sec2-bg-right5 phone">
+                <img src="images/sec2-bg-right5.png" alt=""/>
+            </div>
+            <!--第二屏背景小块结束-->
+
+            <div class="sec1-bg-down-round phone">
+                <a href="index.html#slide3"><img src="images/down-arrow-round.png" alt=""/></a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!--第三屏-->
+    <div class="section sec3"  data-anchor="slide3">
+
+        <div class="title3-top">
+            <img src="images/title3-top-img.png" alt=""/>
+            <h3>部 分 案 例 欣 赏</h3>
+        </div>
+
+        <div class="sec3-content wrap">
+
+            <div class="title3-menu">
+                <ul class="clear">
+                    <li class="on" id="sL-1"><a href="#">案例欣赏</a></li>
+                    <!--<li id="sL-2"><a href="#">品牌</a></li>-->
+                    <!--<li><a href="#">包装</a></li>-->
+                    <!--<li><a href="#">网站</a></li>-->
+                    <!--<li><a href="#">APPS</a></li>-->
+                    <li><a href="#">合作伙伴</a></li>
+                </ul>
+            </div>
+
+            <!--pc版本切换swiper2-->
+            <div class="t33-c">
+
+                <!--精选-->
+                <div class="title3-content">
+                    <div class="swiper-container swiper-container1">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="title3-bc clear">
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img1.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img2.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img3.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img4.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img5.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img6.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="title3-bc clear">
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img1.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img2.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img3.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img4.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img5.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img6.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="title3-bc clear">
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img1.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img2.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img3.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img4.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img5.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img6.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="title3-bc clear">
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img1.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img2.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img3.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img4.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img5.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img6.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="title3-bc clear">
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img1.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img2.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img3.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--盒子-->
+                                    <div class="title3-box">
+                                        <a href="case.html">
+                                            <div class="title3-b-img">
+                                                <img src="images/title3-img4.png" alt=""/>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="title3-box-dark-d">
+                                                <div class="title3-box-dark-top"></div>
+                                                <div class="title3-box-dark-bot">
+                                                    <h4>中香堂 SINAEAN INCENSE TAOISM</h4>
+                                                    <p>Visual Identity</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <!--分页导航-->
+                    <div class="pagination scp1"></div>
+                </div>
+
+
+                <!--合作伙伴-->
+                <div class="title3-content friend-cor">
+                    <div class="swiper-container swiper-container6">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="title3-f clear">
+                                    <img src="images/f1.jpg" alt="">
+                                    <img src="images/f2.jpg" alt="">
+                                    <img src="images/f3.jpg" alt="">
+                                    <img src="images/f4.jpg" alt="">
+                                    <img src="images/f5.jpg" alt="">
+                                    <img src="images/f6.jpg" alt="">
+                                    <img src="images/f7.jpg" alt="">
+                                    <img src="images/f8.jpg" alt="">
+                                    <img src="images/f9.jpg" alt="">
+                                    <img src="images/f10.jpg" alt="">
+                                    <img src="images/f11.jpg" alt="">
+                                    <img src="images/f12.jpg" alt="">
+                                    <img src="images/f13.jpg" alt="">
+                                    <img src="images/f14.jpg" alt="">
+                                    <img src="images/f15.jpg" alt="">
+                                </div>
+                            </div>
+                            <!--<div class="swiper-slide">-->
+                                <!--<div class="title3-f clear">-->
+                                    <!--<img src="images/f1.jpg" alt="">-->
+                                    <!--<img src="images/f2.jpg" alt="">-->
+                                    <!--<img src="images/f3.jpg" alt="">-->
+                                    <!--<img src="images/f4.jpg" alt="">-->
+                                    <!--<img src="images/f5.jpg" alt="">-->
+                                    <!--<img src="images/f6.jpg" alt="">-->
+                                    <!--<img src="images/f7.jpg" alt="">-->
+                                    <!--<img src="images/f8.jpg" alt="">-->
+                                    <!--<img src="images/f9.jpg" alt="">-->
+                                    <!--<img src="images/f10.jpg" alt="">-->
+                                    <!--<img src="images/f11.jpg" alt="">-->
+                                    <!--<img src="images/f12.jpg" alt="">-->
+                                    <!--<img src="images/f13.jpg" alt="">-->
+                                    <!--<img src="images/f14.jpg" alt="">-->
+                                    <!--<img src="images/f15.jpg" alt="">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="swiper-slide">-->
+                                <!--<div class="title3-f clear">-->
+                                    <!--<img src="images/f1.jpg" alt="">-->
+                                    <!--<img src="images/f2.jpg" alt="">-->
+                                    <!--<img src="images/f3.jpg" alt="">-->
+                                    <!--<img src="images/f4.jpg" alt="">-->
+                                    <!--<img src="images/f5.jpg" alt="">-->
+                                    <!--<img src="images/f6.jpg" alt="">-->
+                                    <!--<img src="images/f7.jpg" alt="">-->
+                                    <!--<img src="images/f8.jpg" alt="">-->
+                                    <!--<img src="images/f9.jpg" alt="">-->
+                                    <!--<img src="images/f10.jpg" alt="">-->
+                                    <!--<img src="images/f11.jpg" alt="">-->
+                                    <!--<img src="images/f12.jpg" alt="">-->
+                                    <!--<img src="images/f13.jpg" alt="">-->
+                                    <!--<img src="images/f14.jpg" alt="">-->
+                                    <!--<img src="images/f15.jpg" alt="">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="swiper-slide">-->
+                                <!--<div class="title3-f clear">-->
+                                    <!--<img src="images/f1.jpg" alt="">-->
+                                    <!--<img src="images/f2.jpg" alt="">-->
+                                    <!--<img src="images/f3.jpg" alt="">-->
+                                    <!--<img src="images/f4.jpg" alt="">-->
+                                    <!--<img src="images/f5.jpg" alt="">-->
+                                    <!--<img src="images/f6.jpg" alt="">-->
+                                    <!--<img src="images/f7.jpg" alt="">-->
+                                    <!--<img src="images/f8.jpg" alt="">-->
+                                    <!--<img src="images/f9.jpg" alt="">-->
+                                    <!--<img src="images/f10.jpg" alt="">-->
+                                    <!--<img src="images/f11.jpg" alt="">-->
+                                    <!--<img src="images/f12.jpg" alt="">-->
+                                    <!--<img src="images/f13.jpg" alt="">-->
+                                    <!--<img src="images/f14.jpg" alt="">-->
+                                    <!--<img src="images/f15.jpg" alt="">-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+
+                        </div>
+                    </div>
+                    <!--分页导航-->
+                    <div class="pagination scp6"></div>
+                </div>
+
+            </div>
+
+
+
+
+            <!--手机版案例切换-->
+            <div class="t33-p-c phone">
+                <!--手机版精选-->
+                <div class="title3-content-phone">
+                    <div class="swiper-container swiper-container1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tc-phone-box">
+                                    <a href="case.html"><img src="images/title3-img1.png" alt=""/></a>
+                                    <a href="case.html"><img src="images/title3-img2.png" alt=""/></a>
+                                    <a href="case.html"><img src="images/title3-img3.png" alt=""/></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tc-phone-box">
+                                    <a href="case.html"><img src="images/title3-img4.png" alt=""/></a>
+                                    <a href="case.html"><img src="images/title3-img5.png" alt=""/></a>
+                                    <a href="case.html"><img src="images/title3-img6.png" alt=""/></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tc-phone-box">
+                                    <a href="case.html"><img src="images/title3-img4.png" alt=""/></a>
+                                    <a href="case.html"><img src="images/title3-img5.png" alt=""/></a>
+                                    <a href="case.html"><img src="images/title3-img6.png" alt=""/></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tc-phone-box">
+                                    <a href="case.html"><img src="images/title3-img4.png" alt=""/></a>
+                                    <a href="case.html"><img src="images/title3-img5.png" alt=""/></a>
+                                    <a href="case.html"><img src="images/title3-img6.png" alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination scpp1"></div>
+                    <div class="tc-phone-prev tcp-prev1"></div>
+                    <div class="tc-phone-next tcp-next1"></div>
+                </div>
+
+                <!--手机版合作伙伴-->
+                <div class="title3-content-phone">
+                    <div class="swiper-container swiper-container6">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="f-phone-content">
+                                    <div class="tc-phone-box">
+                                        <a href="case.html"><img src="images/f1.jpg" alt=""/></a>
+                                        <a href="case.html"><img src="images/f2.jpg" alt=""/></a>
+                                        <a href="case.html"><img src="images/f3.jpg" alt=""/></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tc-phone-box">
+                                    <a href="case.html"><img src="images/f4.jpg" alt=""/></a>
+                                    <a href="case.html"><img src="images/f5.jpg" alt=""/></a>
+                                    <a href="case.html"><img src="images/f6.jpg" alt=""/></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tc-phone-box">
+                                    <a href="case.html"><img src="images/f7.jpg" alt=""/></a>
+                                    <a href="case.html"><img src="images/f8.jpg" alt=""/></a>
+                                    <a href="case.html"><img src="images/f9.jpg" alt=""/></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tc-phone-box">
+                                    <a href="case.html"><img src="images/f7.jpg" alt=""/></a>
+                                    <a href="case.html"><img src="images/f8.jpg" alt=""/></a>
+                                    <a href="case.html"><img src="images/f9.jpg" alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination scpp6"></div>
+                    <div class="tc-phone-prev tcp-prev6"></div>
+                    <div class="tc-phone-next tcp-next6"></div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+        <!--第三屏背景小块-->
+        <!--<div class="sec3-bg-small">-->
+            <!--<div class="sec3-bg-left1">-->
+                <!--<img src="images/sec3-bg-left1.png" alt=""/>-->
+            <!--</div>-->
+            <!--<div class="sec3-bg-left2">-->
+                <!--<img src="images/sec3-bg-left2.png" alt=""/>-->
+            <!--</div>-->
+            <!--<div class="sec3-bg-left3">-->
+                <!--<img src="images/sec3-bg-left3.png" alt=""/>-->
+            <!--</div>-->
+
+            <!--<div class="sec3-bg-right1">-->
+                <!--<img src="images/sec3-bg-left3.png" alt=""/>-->
+            <!--</div>-->
+            <!--<div class="sec3-bg-right2">-->
+                <!--<img src="images/sec3-bg-right2.png" alt=""/>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+    </div>
+
+
+    <!--第四屏-->
+    <div class="section sec4" id="sec4-i"  data-anchor="slide4">
+
+
+        <!--新版第四屏-->
+        <div class="sec4-content-new">
+
+            <div class="slideBox">
+                <!--导航-->
+                <div class="hd">
+                    <div class="hd-ul-content">
+                        <ul>
+                            <li class="hdli1">
+                                <h4>关于我们</h4>
+                                <p>About Us</p>
+                            </li>
+                            <li class="hdli2">
+                                <h4>核心价值</h4>
+                                <p>Core Value</p>
+                            </li>
+                            <li class="hdli3">
+                                <h4>团队资源</h4>
+                                <p>Our Team</p>
+                            </li>
+                            <li class="hdli4">
+                                <h4>核心成员</h4>
+                                <p>Core Member</p>
+                            </li>
+                            <li class="hdli5">
+                                <h4>加入我们</h4>
+                                <p>Join Us</p>
+                            </li>
+                            <li class="hdli6">
+                                <h4>新 闻</h4>
+                                <p>News</p>
+                            </li>
+
+                        </ul>
+                        <!-- 下面是前/后按钮代码，不需要可删除-->
+                        <a class="prev" href="javascript:void(0)"></a>
+                        <a class="next" href="javascript:void(0)"></a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bd">
+                    <ul class="s4-bd-ul">
+                        <!--内容1-->
+                        <li class="b-li1 bbli" id="b-li1">
+                            <div class="bg4-1-content">
+                                <div class="wrap">
+                                    <div class="bg4-1-content-title bli-title1">
+                                        <img src="images/bg4-1-title-img.png" alt=""/>
+                                        <h3>关 于 我 们</h3>
+                                    </div>
+                                    <div class="bg4-1-p">
+                                        <div class="bpp-box">
+                                            <p>深圳市浪尖品牌咨询与设计有限公司，简称ABCD。<br>
+                                                ABCD致力于通过自有的一系列工具的应用，从品牌调研与诊断、品牌命名、品牌故事、视觉识别系统设计、包装系统设计、网站设计、UI设计、营销推广、活动策划与执行、媒介策划、品牌创新服务等服务内容，为解决客户在品牌建设过程中遇到的难题，提供细致、全面、可执行的解决方案，打造独一无二的魅力品牌。</p>
+                                        </div>
+                                        <div class="bpp-box">
+                                            <h4>ABCD价值</h4>
+                                            <p>Accurate精准&nbsp;&nbsp;&nbsp;&nbsp;Bright鲜明&nbsp;&nbsp;&nbsp;&nbsp;Creative创意&nbsp;&nbsp;&nbsp;&nbsp;Different差异化<br>
+                                                精准的品牌策略，鲜明的品牌形象，创意的品牌理念，独具差异化的品牌定位和形象，只为倾力打造魅力品牌。</p>
+                                        </div>
+                                        <div class="bpp-box">
+                                            <h4>优势与资源</h4>
+                                            <p>ABCD隶属于<a href="#">浪尖集团</a>，是浪尖集团“全产业链设计创新”战略中的核心板块之一。以全新、独特、创造性的视角和创新精神，整合集团优质资源，为客户提供快速、有效、极致的品牌服务。</p>
+                                        </div>
+
+                                        <div class="bpp4-con clear">
+                                            <div class="bpp4-con-box">
+                                                <span>800<i class="bpp-add"></i></span>
+                                                <p>团队资源</p>
+                                            </div>
+                                            <div class="bpp4-con-box">
+                                                <span>1000<i class="bpp-add"></i></span>
+                                                <p>服务品牌</p>
+                                            </div>
+                                            <div class="bpp4-con-box">
+                                                <span>10000<i class="bpp-add"></i></span>
+                                                <p>成功案例</p>
+                                            </div>
+                                            <div class="bpp4-con-box">
+                                                <span>15000<i class="bpp-add"></i></span>
+                                                <p>知识产权</p>
+                                            </div>
+                                        </div>
+
+                                        <!--<div class="bpp-box-img"></div>-->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            
+                            <div class="bbli-arrow phone">
+                                <img src="images/right-arrow-round.png" alt="">
+                            </div>
+                        </li>
+
+
+                        <!--内容2-->
+                        <li class="b-li2 bbli" id="b-li2">
+                            <div class="bg4-1-content">
+                                <div class="wrap">
+                                    <div class="bg4-1-content-title bli-title2">
+                                        <img src="images/bg4-2-title-img.png" alt=""/>
+                                        <div class="bg4-2-title-p">
+                                            <p>团队+价值+优势的完美协作，</p>
+                                            <p>为客户 <em>提 供 全 方 位 、高 质 量 的 服 务！</em></p>
+                                            <p>帮助品牌提升价值，打造更具差异化的魅力品牌！</p>
+                                        </div>
+                                    </div>
+
+                                    <!--pc/平板公用-->
+                                    <div class="bg4-2-sum clear">
+
+                                        <!--盒子-->
+                                        <div class="bg4-2-box">
+                                            <div class="bg4-2-box-1 clear">
+                                                <img src="images/yellow-round.png" alt=""/>
+                                                <div class="bb-c">
+                                                    <h4>Volume</h4>
+                                                    <p>规模</p>
+                                                </div>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="bg4-2-box-dark">
+                                                <div class="bg4-2-bd-title">
+                                                    <h4>Volume</h4>
+                                                    <p>规模</p>
+                                                </div>
+                                                <div class="bg4-2-bd-p">
+                                                    <p>国内外高端品牌顾问团队，借力集团700余精英设计资源，2000家国内外品牌服务经验、以及十六年累积完整供应链</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--盒子-->
+                                        <div class="bg4-2-box">
+                                            <div class="bg4-2-box-1">
+                                                <img src="images/yellow-round.png" alt=""/>
+                                                <div class="bb-c">
+                                                    <h4>Variety</h4>
+                                                    <p>多元</p>
+                                                </div>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="bg4-2-box-dark">
+                                                <div class="bg4-2-bd-title">
+                                                    <h4>Variety</h4>
+                                                    <p>多元</p>
+                                                </div>
+                                                <div class="bg4-2-bd-p">
+                                                    <p>全新产业链D+6平台<br>
+                                                        服务多元化，<br>
+                                                        创新品牌战略多元化</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--盒子-->
+                                        <div class="bg4-2-box">
+                                            <div class="bg4-2-box-1">
+                                                <img src="images/yellow-round.png" alt=""/>
+                                                <div class="bb-c">
+                                                    <h4>Value</h4>
+                                                    <p>价值</p>
+                                                </div>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="bg4-2-box-dark">
+                                                <div class="bg4-2-bd-title">
+                                                    <h4>Value</h4>
+                                                    <p>价值</p>
+                                                </div>
+                                                <div class="bg4-2-bd-p">
+                                                    <p>提供全方位可落地品牌解决方案、直接增大品牌与价值的转化率</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--盒子-->
+                                        <div class="bg4-2-box">
+                                            <div class="bg4-2-box-1">
+                                                <img src="images/yellow-round.png" alt=""/>
+                                                <div class="bb-c">
+                                                    <h4>Velocity</h4>
+                                                    <p>高效</p>
+                                                </div>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="bg4-2-box-dark">
+                                                <div class="bg4-2-bd-title">
+                                                    <h4>Velocity</h4>
+                                                    <p>高效</p>
+                                                </div>
+                                                <div class="bg4-2-bd-p">
+                                                    <p>利用ABCD独有专业品牌<br>
+                                                        工具，超越系统化<br>
+                                                        操作模式</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--盒子-->
+                                        <div class="bg4-2-box">
+                                            <div class="bg4-2-box-1">
+                                                <img src="images/yellow-round.png" alt=""/>
+                                                <div class="bb-c">
+                                                    <h4>Vision</h4>
+                                                    <p>视野</p>
+                                                </div>
+                                            </div>
+                                            <!--遮罩-->
+                                            <div class="bg4-2-box-dark">
+                                                <div class="bg4-2-bd-title">
+                                                    <h4>Vision</h4>
+                                                    <p>视野</p>
+                                                </div>
+                                                <div class="bg4-2-bd-p">
+                                                    <p>多维度人才输入，<br>
+                                                        打造全球视野品牌</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--品牌手机版-->
+                                    <div class="bg4-brand-content phone">
+                                        <div class="b4p-brand-box">
+                                            <div class="b4p-brand-box-title">
+                                                <h4>Volume</h4>
+                                                <p>规模</p>
+                                            </div>
+                                            <div class="b4p-brand-box-p">
+                                                <p>国内外高端品牌顾问团队，借力集团700余精英设计资源，2000家...</p>
+                                            </div>
+                                        </div>
+                                        <div class="b4p-brand-box">
+                                            <div class="b4p-brand-box-title">
+                                                <h4>Variety</h4>
+                                                <p>多元</p>
+                                            </div>
+                                            <div class="b4p-brand-box-p">
+                                                <p>提供全方位可落地品牌解决方案、直接增大品牌与价值的转化率</p>
+                                            </div>
+                                        </div>
+                                        <div class="b4p-brand-box">
+                                            <div class="b4p-brand-box-title">
+                                                <h4>Value</h4>
+                                                <p>价值</p>
+                                            </div>
+                                            <div class="b4p-brand-box-p">
+                                                <p>全新产业链D+6平台服务多元化，创新品牌战略多元化</p>
+                                            </div>
+                                        </div>
+                                        <div class="b4p-brand-box">
+                                            <div class="b4p-brand-box-title">
+                                                <h4>Velocity</h4>
+                                                <p>高效</p>
+                                            </div>
+                                            <div class="b4p-brand-box-p">
+                                                <p>利用ABCD独有专业品牌工具，超越系统化操作模式</p>
+                                            </div>
+                                        </div>
+                                        <div class="b4p-brand-box">
+                                            <div class="b4p-brand-box-title">
+                                                <h4>Vision</h4>
+                                                <p>视野</p>
+                                            </div>
+                                            <div class="b4p-brand-box-p">
+                                                <p>多维度人才输入，<br>打造全球视野品牌</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <!--内容3-->
+                        <li class="b-li3 bbli" id="b-li3">
+                            <div class="bg4-1-content">
+                                <div class="wrap">
+                                    <div class="bg4-1-content-title bli-title3">
+                                        <img src="images/bg4-3-title-img.png" alt=""/>
+                                        <p class="bg4-3-ct">我们的团队来自世界各地</p>
+                                    </div>
+                                    <div class="bli3-content">
+                                        <div class="bli3-sz">
+                                            <img src="images/sz.png" alt="">
+                                        </div>
+                                        <div class="bli3-hk">
+                                            <img src="images/hk.png" alt="">
+                                        </div>
+                                        <div class="bli3-aus">
+                                            <img src="images/aus.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <!--内容4-->
+                        <li class="b-li4 bbli" id="b-li4">
+                            <div class="bg4-1-content">
+
+                                <div class="wrap">
+                                    <div class="bg4-1-content-title bli-title4">
+                                        <img src="images/bg4-4-title-img.png" alt=""/>
+                                    </div>
+
+                                    <div class="bg4-4-wrap clear">
+                                        <div class="bg4-4-box clear">
+                                            <div class="bg4-4-box-img">
+                                                <img src="images/bg4-people1.png" alt=""/>
+                                            </div>
+                                            <div class="bb4-p">
+                                                <h3>Gary Jang</h3>
+                                                <h4>CEO / Creative Director</h4>
+                                                <!--电脑版文字简介-->
+                                                <p>澳大利亚籍华人，毕业于悉尼大学多媒体设计专业。资深设计师及品牌顾问，十多年来从事品牌设计行业，服务过的行业涉及快消品...</p>
+                                                <!--手机版文字简介-->
+                                                <!--<div class="bb4-p-phone phone">-->
+                                                    <!--<p>美國企業家、行銷家和發明家，蘋果公司的聯合創始人之一，曾任董事長及執行長職位，NeXT創辦人及執行長。</p>-->
+                                                <!--</div>-->
+                                            </div>
+                                        </div>
+                                        <div class="bg4-4-box clear">
+                                            <div class="bg4-4-box-img">
+                                                <img src="images/bg4-people2.png" alt=""/>
+                                            </div>
+                                            <div class="bb4-p">
+                                                <h3>Jason Li</h3>
+                                                <h4>Account Manager</h4>
+                                                <!--电脑版文字简介-->
+                                                <p>资深项目管理，多年汽车、珠宝、金融、快消品、运营商、消费电子、旅游等行业品牌操作服务经验，对品牌规划、营销公关、整合传播...</p>
+                                                <!--手机版文字简介-->
+                                                <!--<div class="bb4-p-phone phone">-->
+                                                    <!--<p>美國企業家、行銷家和發明家，蘋果公司的聯合創始人之一，曾任董事長及執行長職位，NeXT創辦人及執行長。</p>-->
+                                                <!--</div>-->
+                                            </div>
+                                        </div>
+                                        <div class="bg4-4-box clear">
+                                            <div class="bg4-4-box-img">
+                                                <img src="images/bg4-people3.png" alt=""/>
+                                            </div>
+                                            <div class="bb4-p">
+                                                <h3>Muse Ka</h3>
+                                                <h4>Senior Designer</h4>
+                                                <!--电脑版文字简介-->
+                                                <p>多年的全国十佳设计机构设计行业从业经验，资深设计师及品牌顾问，服务过的行业涉及快消品、酒店、电子消费品、科技、金融、建筑等...</p>
+                                                <!--手机版文字简介-->
+                                                <!--<div class="bb4-p-phone phone">-->
+                                                    <!--<p>美國企業家、行銷家和發明家，蘋果公司的聯合創始人之一，曾任董事長及執行長職位，NeXT創辦人及執行長。</p>-->
+                                                <!--</div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+
+
+                        <!--内容5-->
+                        <li class="b-li5 bbli" id="b-li5">
+                            <div class="bg4-1-content">
+                                <div class="wrap">
+                                    <div class="bg4-1-content-title bli-title5">
+                                        <img src="images/bg4-5-title-img.png" alt=""/>
+                                    </div>
+
+                                    <div class="bg4-5-ct">
+                                        <h4>梦想与希望同在！</h4>
+                                        <p>如果你有梦想，有希望，有激情又热爱品牌，欢迎加入ABCD！</p>
+                                        <p>请将作品及个人简历发送至邮箱：hr@artopbrand.com</p>
+                                    </div>
+
+
+                                    <div class="bg4-5-wrap clear">
+                                        <!--左侧-->
+                                        <div class="bg4-5-wrap-left">
+                                            <ul class=" clear">
+                                                <li class="on"><a href="javascript:;">美术指导</a></li>
+                                                <li><a href="javascript:;">资深设计师</a></li>
+                                                <li><a href="javascript:;">交互设计师</a></li>
+                                                <li><a href="javascript:;">资深品牌设计师</a></li>
+                                                <li><a href="javascript:;">创意文案</a></li>
+                                                <li><a href="javascript:;">项目执行</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!--右侧-->
+                                        <div class="bg4-5r-content">
+                                            <!--招聘内容1-->
+                                            <div class="bg4-5-wrap-right">
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位描述：</h4>
+                                                    <p>- 能独立高效的完成策划项目，协助上级负责项目方案的撰写统筹；</p>
+                                                    <p>- 负责策划项目的监督工作；</p>
+                                                    <p>- 能很好的与客户进行策略性的商务洽谈，并给予客户积极的引导，维护与客户间良好的客户关系；</p>
+                                                    <p>- 具有比较强的沟通能力，能够带动、培养新进员工；</p>
+                                                    <p>- 协助上级，倡导策划部团结协作，团结进取等良好氛围。</p>
+                                                </div>
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位要求：</h4>
+                                                    <p>
+                                                        - 汉语言文学、新闻类、广告学、营销策划等专业背景优先，3年以上品牌策划工作经验，或4A工作经验；<br>
+                                                        - 优秀的理解能力及团队协作精神，丰富的思想内涵，独到的观点，善于分析；<br>
+                                                        - 性格外向，容易与人打交道，具备滔滔不绝，出口成章的能力；<br>
+                                                        - 有跨界的认识及看法，有专业的策划沟通能力，良好的提案能力，良好的营销策划能力、精通各种策划手法的运用；<br>
+                                                        - 对市场信息有足够的了解，充分将市场营销与品牌策划结合起来，要求具有敏感直觉和前瞻性；<br>
+                                                        - 责任心强，工作细心，认真踏实。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--招聘内容2-->
+                                            <div class="bg4-5-wrap-right">
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位描述：</h4>
+                                                    <p>- 资深设计师；</p>
+                                                    <p>- 负责策划项目的监督工作；</p>
+                                                    <p>- 能很好的与客户进行策略性的商务洽谈，并给予客户积极的引导，维护与客户间良好的客户关系；</p>
+                                                    <p>- 具有比较强的沟通能力，能够带动、培养新进员工；</p>
+                                                </div>
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位要求：</h4>
+                                                    <p>
+                                                        - 汉语言文学、新闻类、广告学、营销策划等专业背景优先，3年以上品牌策划工作经验，或4A工作经验；<br>
+                                                        - 优秀的理解能力及团队协作精神，丰富的思想内涵，独到的观点，善于分析；<br>
+                                                        - 性格外向，容易与人打交道，具备滔滔不绝，出口成章的能力；<br>
+                                                        - 有跨界的认识及看法，有专业的策划沟通能力，良好的提案能力，良好的营销策划能力、精通各种策划手法的运用；<br>
+                                                        - 对市场信息有足够的了解，充分将市场营销与品牌策划结合起来，要求具有敏感直觉和前瞻性；<br>
+                                                        - 责任心强，工作细心，认真踏实。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--招聘内容3-->
+                                            <div class="bg4-5-wrap-right">
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位描述：</h4>
+                                                    <p>- 交互设计师；</p>
+                                                    <p>- 负责策划项目的监督工作；</p>
+                                                    <p>- 能很好的与客户进行策略性的商务洽谈，并给予客户积极的引导，维护与客户间良好的客户关系；</p>
+                                                    <p>- 具有比较强的沟通能力，能够带动、培养新进员工；</p>
+                                                    <p>- 协助上级，倡导策划部团结协作，团结进取等良好氛围。</p>
+                                                </div>
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位要求：</h4>
+                                                    <p>
+                                                        - 汉语言文学、新闻类、广告学、营销策划等专业背景优先，3年以上品牌策划工作经验，或4A工作经验；<br>
+                                                        - 优秀的理解能力及团队协作精神，丰富的思想内涵，独到的观点，善于分析；<br>
+                                                        - 性格外向，容易与人打交道，具备滔滔不绝，出口成章的能力；<br>
+                                                        - 有跨界的认识及看法，有专业的策划沟通能力，良好的提案能力，良好的营销策划能力、精通各种策划手法的运用；<br>
+                                                        - 对市场信息有足够的了解，充分将市场营销与品牌策划结合起来，要求具有敏感直觉和前瞻性；<br>
+                                                        - 责任心强，工作细心，认真踏实。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--招聘内容4-->
+                                            <div class="bg4-5-wrap-right">
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位描述：</h4>
+                                                    <p>- 资深品牌设计师；</p>
+                                                    <p>- 负责策划项目的监督工作；</p>
+                                                    <p>- 能很好的与客户进行策略性的商务洽谈，并给予客户积极的引导，维护与客户间良好的客户关系；</p>
+                                                    <p>- 具有比较强的沟通能力，能够带动、培养新进员工；</p>
+                                                </div>
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位要求：</h4>
+                                                    <p>
+                                                        - 汉语言文学、新闻类、广告学、营销策划等专业背景优先，3年以上品牌策划工作经验，或4A工作经验；<br>
+                                                        - 优秀的理解能力及团队协作精神，丰富的思想内涵，独到的观点，善于分析；<br>
+                                                        - 性格外向，容易与人打交道，具备滔滔不绝，出口成章的能力；<br>
+                                                        - 有跨界的认识及看法，有专业的策划沟通能力，良好的提案能力，良好的营销策划能力、精通各种策划手法的运用；<br>
+                                                        - 对市场信息有足够的了解，充分将市场营销与品牌策划结合起来，要求具有敏感直觉和前瞻性；<br>
+                                                        - 责任心强，工作细心，认真踏实。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--招聘内容5-->
+                                            <div class="bg4-5-wrap-right">
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位描述：</h4>
+                                                    <p>- 创意文案；</p>
+                                                    <p>- 负责策划项目的监督工作；</p>
+                                                    <p>- 能很好的与客户进行策略性的商务洽谈，并给予客户积极的引导，维护与客户间良好的客户关系；</p>
+                                                    <p>- 具有比较强的沟通能力，能够带动、培养新进员工；</p>
+                                                    <p>- 协助上级，倡导策划部团结协作，团结进取等良好氛围。</p>
+                                                </div>
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位要求：</h4>
+                                                    <p>
+                                                        - 汉语言文学、新闻类、广告学、营销策划等专业背景优先，3年以上品牌策划工作经验，或4A工作经验；<br>
+                                                        - 优秀的理解能力及团队协作精神，丰富的思想内涵，独到的观点，善于分析；<br>
+                                                        - 性格外向，容易与人打交道，具备滔滔不绝，出口成章的能力；<br>
+                                                        - 有跨界的认识及看法，有专业的策划沟通能力，良好的提案能力，良好的营销策划能力、精通各种策划手法的运用；<br>
+                                                        - 对市场信息有足够的了解，充分将市场营销与品牌策划结合起来，要求具有敏感直觉和前瞻性；<br>
+                                                        - 责任心强，工作细心，认真踏实。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--招聘内容6-->
+                                            <div class="bg4-5-wrap-right">
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位描述：</h4>
+                                                    <p>- 项目执行；</p>
+                                                    <p>- 负责策划项目的监督工作；</p>
+                                                    <p>- 能很好的与客户进行策略性的商务洽谈，并给予客户积极的引导，维护与客户间良好的客户关系；</p>
+                                                    <p>- 具有比较强的沟通能力，能够带动、培养新进员工；</p>
+                                                </div>
+                                                <div class="bg4-5-wr-top">
+                                                    <h4>职位要求：</h4>
+                                                    <p>
+                                                        - 汉语言文学、新闻类、广告学、营销策划等专业背景优先，3年以上品牌策划工作经验，或4A工作经验；<br>
+                                                        - 优秀的理解能力及团队协作精神，丰富的思想内涵，独到的观点，善于分析；<br>
+                                                        - 性格外向，容易与人打交道，具备滔滔不绝，出口成章的能力；<br>
+                                                        - 有跨界的认识及看法，有专业的策划沟通能力，良好的提案能力，良好的营销策划能力、精通各种策划手法的运用；<br>
+                                                        - 对市场信息有足够的了解，充分将市场营销与品牌策划结合起来，要求具有敏感直觉和前瞻性；<br>
+                                                        - 责任心强，工作细心，认真踏实。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </li>
+
+
+                        <!--内容6-->
+                        <li class="b-li6 bbli" id="b-li6">
+                            <div class="bg4-1-content">
+                                <div class="wrap">
+                                    <div class="bg4-1-content-title bli-title6">
+                                        <img src="images/bg4-6-title-img.png" alt=""/>
+                                        <p class="bg4-6-ct">跟贴我们的微信公众号，让你每天感到惊喜。</p>
+                                    </div>
+
+                                    <div class="bg4-6-wrap clear">
+                                        <a href="news.html">
+                                            <div class="bg4-6-wrap-left">
+                                                <img src="images/index-news1.jpg" alt=""/>
+                                            </div>
+                                            <div class="bg4-6-wrap-right clear">
+                                                <div class="bwr-l">
+                                                    <div class="bg4-6-wr-new">最新 Last Post</div>
+                                                    <div class="bg4-6-wr-time">14 September 2014</div>
+                                                    <div class="bg4-6-wr-p">
+                                                        <h4>你不知道的品牌体验</h4>
+                                                        <p>ABCD隶属于浪尖集团，是浪尖集团“全产业链设计创新”战略中的核心板块之一。借助浪尖集团强大的产业链资源优势，坚持浪尖集团“以用户为中心、以市场为导向、以持续发展为原则”。</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bg4-6-more">
+                                                    <p>阅 读 更 多</p>
+                                                    <p>Read More</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="bg4-6-news-more">
+                                        <a href="http://www.artopcn.com">
+                                            <p>集 团 新 闻</p>
+                                            <p>Group News</p>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--第五屏-->
+    <div class="section sec5"  data-anchor="slide5">
+
+
+        <!--手机版地图-->
+        <div class="phone-map">
+            <div class="phone-map-bg"></div>
+            <div class="phone-map-content">
+                <img src="images/phone-map.jpg" alt="">
+            </div>
+        </div>
+
+
+        <div class="sec5-top">
+            <div class="wrap">
+                <div class="title5-top">
+                    <img src="images/title5-top-img.png" alt=""/>
+                    <h3>让 我 们 了 解 您 的 需 要</h3>
+                </div>
+
+                <div class="title5-content">
+                    <form action="loading.html">
+                        <div class="title5-input clear">
+                            <div class="title5-input-left">
+                                <p>姓名&nbsp;NAME<span>*</span></p>
+                                <input type="text"/>
+                            </div>
+                            <div class="title5-input-left">
+                                <p>电邮&nbsp;E-MAIL<span>*</span></p>
+                                <input type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="title5-input clear">
+                            <div class="title5-input-left">
+                                <p>电话&nbsp;PHONE<span>*</span></p>
+                                <input type="text"/>
+                            </div>
+                            <div class="title5-input-left">
+                                <p>公司&nbsp;COMPANY<span>*</span></p>
+                                <input type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="title5-text">
+                            <p>信息&nbsp;MESSAGE<span>*</span></p>
+                            <textarea placeholder="告诉我们您的需求" data-role="none"></textarea>
+                        </div>
+
+                        <div class="title5-btn">
+                            <input data-role='none'  class="title5-submit" type="submit" value="发送"/>
+                        </div>
+                    </form>
+                </div>
+
+                <!--手机版底部联系方式(独立),删除-->
+                <!--<div class="sec5-phone-contact-bot phone">-->
+                <!--<div class="spcb-content">-->
+                <!--<p><span class="spcb-phone">0755-8354 4131 </span></p>-->
+                <!--<p><span class="spcb-mail">account@artopbrand.com</span></p>-->
+                <!--<p><span class="spcb-address">深圳市南山区南山大道3838号设计产业园浪尖设计大楼二楼ABCD<i class="spcb-arrow">▼</i></span></p>-->
+                <!--<p><span>© 2016 ABCD. All rights reserved.  | privacy policy </span></p>-->
+                <!--</div>-->
+                <!--</div>-->
+
+            </div>
+
+        </div>
+
+        <div class="sec5-bot">
+            <div class="sec5-bot-logo">
+                <img src="images/logo-black.png" alt=""/>
+            </div>
+
+            <div class="bot-contact">
+                <a href="#"><img src="images/Contact_QQ_icon.png" alt=""/></a><a href="#"><img src="images/Contact_wechat_icon.png" alt=""/></a><a href="#"><img src="images/Contact_weibo_icon.png" alt=""/></a>
+            </div>
+
+            <div class="bot-call">
+                <p><span class="bot-call-phone">0755-8354 4131 </span></p>
+                <p><span class="bot-call-mail">account@artopbrand.com</span></p>
+                <p><span class="bot-call-address">深圳市南山区南山大道3838号设计产业园浪尖设计大楼二楼ABCD<i class="spcb-arrow">▼</i></span></p>
+            </div>
+
+            <div class="bot-right">
+                <p>© 2016 ABCD. All rights reserved.  | privacy policy | terms of use</p>
+            </div>
+        </div>
+
+
+        <!--第五屏背景小块-->
+        <div class="sec5-bg-small">
+            <div class="sec5-bg-left1">
+                <img src="images/sec5-bg-left1.png" alt=""/>
+            </div>
+            <div class="sec5-bg-left2">
+                <img src="images/sec5-bg-left2.png" alt=""/>
+            </div>
+            <div class="sec5-bg-left3">
+                <img src="images/sec5-bg-left3.png" alt=""/>
+            </div>
+
+            <div class="sec5-bg-right1">
+                <img src="images/sec5-bg-right1.png" alt=""/>
+            </div>
+            <div class="sec5-bg-right2">
+                <img src="images/sec5-bg-right2.png" alt=""/>
+            </div>
+            <div class="sec5-bg-right3">
+                <img src="images/sec5-bg-right3.png" alt=""/>
+            </div>
+        </div>
+
+
+        <div class="go-top">
+            <a href="index.html#slide1"><img src="images/goTop-img.png" alt=""/></a>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+    $(function(){
+
+        //去除jqM的默认样式
+//        $("a").attr('data-ajax',false);
+//        $("input").attr('data-role','none');
+//        $("select").attr('data-role','none');
+
+
+
+        //第三屏案例默认第一个显示
+        $(".t33-c .title3-content:eq(0)").css('z-index',12);
+        $(".t33-p-c .title3-content-phone:eq(0)").css('z-index',12);
+        //案例点击切换
+        $('.title3-menu ul li').click(function () {
+            var caseNum=$(this).index();
+
+            $('.title3-menu ul li').removeClass('on');
+            $(this).addClass('on');
+            //$('#txt').val(0);
+
+            $('.t33-c .title3-content').css('z-index',-1);
+            $(".t33-c .title3-content:eq("+ caseNum +")").css('z-index',12);
+            $('.t33-p-c .title3-content-phone').css('z-index',-1);
+            $(".t33-p-c .title3-content-phone:eq("+ caseNum +")").css('z-index',12);
+        });
+
+        //第三屏案例轮播--PC
+        var mySwiperCase1 = new Swiper('.title3-content .swiper-container1',{
+            calculateHeight : true,
+            resizeReInit : true,
+            speed:800,
+            pagination : '.scp1',
+            paginationClickable :true,
+            autoplayDisableOnInteraction : false
+            //其他设置
+        });
+
+        var mySwiperCase6 = new Swiper('.title3-content .swiper-container6',{
+            calculateHeight : true,
+            resizeReInit : true,
+            speed:800,
+            pagination : '.scp6',
+            paginationClickable :true,
+            autoplayDisableOnInteraction : false
+            //其他设置
+        });
+
+        $(window).resize(function () {
+            mySwiperCase1.reInit();
+            mySwiperCase6.reInit();
+
+            mySwiperCase_p1.reInit();
+//            mySwiperCase_p2.reInit();
+//            mySwiperCase_p3.reInit();
+//            mySwiperCase_p4.reInit();
+//            mySwiperCase_p5.reInit();
+            mySwiperCase_p6.reInit();
+
+        });
+
+
+
+        //判断案例，当作品不足两页时，分页器不出现
+        var c1=$('.swiper-container1 .title3-box').size();
+//        var c2=$('.swiper-container2 .title3-box').size();
+//        var c3=$('.swiper-container3 .title3-box').size();
+//        var c4=$('.swiper-container4 .title3-box').size();
+//        var c5=$('.swiper-container5 .title3-box').size();
+        var fri=$('.friend-cor img').size();
+        //console.log(fri);
+        if(c1<7){
+            $('.scp1').animate({opacity:"0"},10);
+        }
+//        if(c2<7){
+//            $('.scp2').animate({opacity:"0"},10);
+//        }
+//        if(c3<7){
+//            $('.scp3').animate({opacity:"0"},10);
+//        }
+//        if(c4<7){
+//            $('.scp4').animate({opacity:"0"},10);
+//        }
+//        if(c5<7){
+//            $('.scp5').animate({opacity:"0"},10);
+//        }
+        if(fri<16){
+            $('.scp6').animate({opacity:"0"},10);
+        }
+
+
+
+
+
+        //第三屏案例轮播--手机
+        var mySwiperCase_p1 = new Swiper('.title3-content-phone .swiper-container1',{
+            calculateHeight : true,
+            resizeReInit : true,
+            speed:500,
+            pagination : '.scpp1',
+            paginationClickable :true,
+            autoplayDisableOnInteraction : false
+            //其他设置
+        });
+        $('.tcp-prev1').click(function () {
+            mySwiperCase_p1.swipePrev();
+        });
+        $('.tcp-next1').click(function () {
+            mySwiperCase_p1.swipeNext();
+        });
+
+        var mySwiperCase_p6 = new Swiper('.title3-content-phone .swiper-container6',{
+            calculateHeight : true,
+            resizeReInit : true,
+            speed:500,
+            pagination : '.scpp6',
+            paginationClickable :true,
+            autoplayDisableOnInteraction : false
+            //其他设置
+        });
+        $('.tcp-prev6').click(function () {
+            mySwiperCase_p6.swipePrev();
+        });
+        $('.tcp-next6').click(function () {
+            mySwiperCase_p6.swipeNext();
+        });
+
+
+
+        //案例遮罩
+        $(".title3-box").hover(
+                function () {
+                    $(this).find(".title3-box-dark-top").stop().animate({top:"0"},300);
+                    $(this).find(".title3-box-dark-bot").stop().animate({bottom:"0"},300);
+                },
+                function () {
+                    $(this).find(".title3-box-dark-top").stop().animate({top:"-100%"},300);
+                    $(this).find(".title3-box-dark-bot").stop().animate({bottom:"-100%"},300);
+                }
+        );
+
+
+        //第四屏关于我们切换--新
+        jQuery(".sec4-content-new .slideBox").slide({mainCell:".bd .s4-bd-ul",effect:"left",trigger:"click",delayTime:300, vis:"auto", scroll:1,autoPlay:false,pnLoop:false});
+        $('.bbli-arrow img').click(function () {
+            $('.sec4-content-new .slideBox .next').click();
+        });
+
+        var w=$(window).width();
+        var h=$(window).height();
+
+        $('.slideBox').height( h );
+
+
+//        if( w >= 1100 ){
+//            //监听宽度，给导航按钮绑定悬浮事件
+//            $('.nav-btn').mouseover(function () {
+//                setTimeout(function () {
+//                    $('.nav-btn').hide();
+//                },500);
+//                $('.nav-menu').removeClass('animated bounceOutRight');
+//                $('.nav-menu').show().addClass('animated bounceInRight');
+//            });
+//            //鼠标离开导航缩回
+//            $('.nav-menu').mouseleave(function(){
+//                $('.nav-menu').addClass('animated bounceOutRight');
+//                setTimeout(function(){
+//                    $('.nav-btn').show();
+//                },500);
+//            });
+//
+//        }
+
+
+
+        $('.sec4-content-new .slideBox .bd .bbli').height( h );
+
+        //监听窗口大小的改变
+        $(window).resize(function () {
+            var w=$(window).width();
+            var h=$(window).height();
+
+//            $('.b-li').height( h );
+            $('.slideBox').height( h );
+            $('.sec4-content-new .slideBox .bd .bbli').height( h );
+
+        });
+
+
+
+
+        //手机第四屏menu,右滑触发
+        var sec4=document.getElementById('sec4-i');
+//        var sec4_menu=document.getElementById('sec4-menu');
+//        var sec4_menu_bg=document.getElementById('sec4-menu-bg');
+
+        var b_li1=document.getElementById('b-li1');
+        var b_li2=document.getElementById('b-li2');
+        var b_li3=document.getElementById('b-li3');
+        var b_li4=document.getElementById('b-li4');
+        var b_li5=document.getElementById('b-li5');
+        var b_li6=document.getElementById('b-li6');
+
+//        var smb1=document.getElementById('sec4-menu-box1');
+//        var smb2=document.getElementById('sec4-menu-box2');
+//        var smb3=document.getElementById('sec4-menu-box3');
+//        var smb4=document.getElementById('sec4-menu-box4');
+//        var smb5=document.getElementById('sec4-menu-box5');
+//        var smb6=document.getElementById('sec4-menu-box6');
+
+
+        //初始化hammer
+        var hammertime = new Hammer(sec4);
+//        var hammer_menu = new Hammer(sec4_menu);
+//        var hammer_menu_bg = new Hammer(sec4_menu_bg);
+
+        var hammer_b_li1 = new Hammer(b_li1);
+        var hammer_b_li2 = new Hammer(b_li2);
+        var hammer_b_li3 = new Hammer(b_li3);
+        var hammer_b_li4 = new Hammer(b_li4);
+        var hammer_b_li5 = new Hammer(b_li5);
+        var hammer_b_li6 = new Hammer(b_li6);
+
+//        var hb1 = new Hammer(smb1);
+//        var hb2 = new Hammer(smb2);
+//        var hb3 = new Hammer(smb3);
+//        var hb4 = new Hammer(smb4);
+//        var hb5 = new Hammer(smb5);
+//        var hb6 = new Hammer(smb6);
+
+        //调用Hammer
+        hammer_b_li1.on('swipeleft', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .next').click();
+        });
+        hammer_b_li1.on('swiperight', function(ev) {
+            ev.preventDefault();
+            //$('.sec4-content-new .slideBox .prev').click();
+//            $('.sec4-menu-box').removeClass('on');
+//            $('.sec4-menu-box:eq(0)').addClass('on');
+//            $('.sec4-menu').animate({left:"0"},200);
+        });
+        hammer_b_li2.on('swipeleft', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .next').click();
+        });
+        hammer_b_li2.on('swiperight', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .prev').click();
+        });
+        hammer_b_li3.on('swipeleft', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .next').click();
+        });
+        hammer_b_li3.on('swiperight', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .prev').click();
+        });
+        hammer_b_li4.on('swipeleft', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .next').click();
+        });
+        hammer_b_li4.on('swiperight', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .prev').click();
+        });
+        hammer_b_li5.on('swipeleft', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .next').click();
+        });
+        hammer_b_li5.on('swiperight', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .prev').click();
+        });
+        hammer_b_li6.on('swipeleft', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .next').click();
+        });
+        hammer_b_li6.on('swiperight', function(ev) {
+            ev.preventDefault();
+            $('.sec4-content-new .slideBox .prev').click();
+        });
+
+
+//        hammer_b_li1.on('swiperight', function (ev) {
+//            ev.preventDefault();
+//            $('.sec4-menu').animate({left:"0"},200);
+//        });
+
+
+
+//        hammer_menu.on('swipeleft', function (ev) {
+//            smb1.click();
+//            ev.preventDefault();
+//        });
+//        hammer_menu.on('swiperight', function (ev) {
+//            ev.preventDefault();
+//        });
+
+
+
+
+//        $('.nav-menu ul li:eq(3)').click(function () {
+//            //$('.sec4-menu').animate({left:"0"},200);
+//            $('.hdli1').click();
+//        });
+
+
+
+
+        //第四屏menu点击切换
+//        $('.sec4-menu-content .sec4-menu-box').click(function () {
+//            var _index=$(this).index();
+//            $('.sec4-menu-box').removeClass('on');
+//            $(this).addClass('on');
+//
+//            $('.sec4-menu').animate({left:"-100%"},300);
+//
+//            //alert(_index);
+//            setTimeout(function () {
+//                $(".sec4-content-new .slideBox .hd ul li:eq("+ _index +")").click();
+//            },300)
+//        });
+
+
+        //第四屏点击分页关联menu
+//        $(".sec4-content-new .slideBox .hd ul li").click(function () {
+//            var _point=$(this).index();
+//            //alert(_point);
+//            $('.sec4-menu-box').removeClass('on');
+//            $(".sec4-menu-content .sec4-menu-box:eq("+ _point +")").addClass('on');
+//        });
+
+
+
+        //第四屏分页核心价值
+        $(".bg4-2-box").hover(
+                function () {
+                    $(this).find(".bg4-2-box-1").stop().animate({opacity:"0"},300);
+                    $(this).find(".bg4-2-box-dark").stop().delay(50).animate({top:"0",opacity:"1"},500);
+                    setTimeout(function () {
+                        $(".bg4-2-bd-title").stop().animate({left:"0",opacity:"1"},400)
+                    },500)
+                },
+                function () {
+                    $(this).find(".bg4-2-box-1").stop().animate({opacity:"1"},300);
+                    $(this).find(".bg4-2-box-dark").stop().animate({top:"3rem",opacity:"0"},500);
+                    $(".bg4-2-bd-title").stop().animate({"left":-500,opacity:0},400)
+                }
+        );
+
+
+        //第四屏招聘职位切换
+        $(".bg4-5r-content .bg4-5-wrap-right:eq(0)").show();//默认第一个显示
+        $('.bg4-5-wrap-left ul li').click(function () {
+            var _index=$(this).index();
+            $('.bg4-5-wrap-left li').removeClass('on');
+            $(this).addClass('on');
+            //alert(_index);
+            $(".bg4-5-wrap-right").hide();
+            $(".bg4-5r-content .bg4-5-wrap-right:eq("+ _index +")").show();
+        });
+
+
+
+        //手机版地图
+        $('.bot-call-address').click(function () {
+            var w=$(window).width();
+            if( w< 780 ){
+                $('.phone-map').show();
+            }
+        });
+        $('.phone-map-bg').click(function () {
+            $('.phone-map').hide();
+        });
+
+
+
+
+
+        $('#dowebok').fullpage({
+            resize: true,
+            //'css3': true,
+            scrollingSpeed: 450,
+            verticalCentered: false,
+            touchSensitivity: 15,
+            //loopBottom: true,
+
+//            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+
+
+
+            //离开某页
+            onLeave: function(index, nextIndex, direction){
+                var leavingSection = $(this);
+
+                //离开第一页
+                if(index == 1 && direction =='down'){
+
+                    var $div1=$('.sec1 div');
+
+                    $div1.removeClass('meUp1');
+                    $div1.removeClass('meUp2');
+                    $div1.removeClass('meDown1');
+                    $div1.removeClass('meDown2');
+                    $div1.removeClass('meLeft1');
+                    $div1.removeClass('meLeft2');
+                    $div1.removeClass('fadeInDown');
+                    $div1.removeClass('fadeInUp');
+                    $div1.removeClass('ani');
+                    $('.sec1-bg-mid img').removeClass('ani');
+
+
+                    $('.sec1-nav').stop().animate({top: "-3.7rem"},300);
+                    $('.sec1-search-icon').show();
+                    $('.sec1-search-box').hide();
+                    $('.sec1-search-input').removeClass('on');
+                    $('.sec-search-menu a').removeClass('on');
+
+
+                    //$('.sec1-bg-mid img').animate({"margin-bottom":"0","opacity":"0"},10);
+                }
+
+                //离开第二页进入第一页
+                else if(index == 2 && direction =='up'){
+                    setTimeout(function () {
+                        //$('.sec1-title').addClass('animated fadeInUp');
+                        $('.sec1-title').addClass('ani');
+
+                        $('.sec1-bg-round').addClass('animated fadeInDown');
+
+                        $('.sec1-bg-top1').addClass('meDown1');
+                        $('.sec1-bg-top2').addClass('meDown1');
+
+                        $('.sec1-bg-bot1').addClass('meLeft1');
+                        $('.sec1-bg-bot2').addClass('meUp1');
+                        $('.sec1-bg-bot3').addClass('animated fadeInUp');
+                        $('.sec1-bg-bot4').addClass('meUp1');
+                        $('.sec1-bg-bot5').addClass('animated fadeInUp');
+                        $('.sec1-bg-bot6').addClass('ani');
+                        $('.sec1-bg-bot7').addClass('ani');
+                        $('.sec1-bg-bot8').addClass('ani');
+                        $('.sec1-bg-bot9').addClass('ani');
+                        $('.sec1-bg-bot10').addClass('ani');
+
+                        $('.sec1-bg-mid img').addClass('ani');
+                        $('.sc1-round').addClass('ani');
+
+                    },150);
+
+
+
+                    //清除第二页效果
+                    var $div2=$('.sec2 div');
+                    $('.title2-content-bot').animate({width:"0",opacity:0},50);
+
+                    $div2.removeClass('meUp1');
+                    $div2.removeClass('meUp2');
+                    $div2.removeClass('meDown1');
+                    $div2.removeClass('meDown2');
+                    $div2.removeClass('meLeft1');
+                    $div2.removeClass('meLeft2');
+                    $div2.removeClass('fadeInDown');
+                    $div2.removeClass('fadeInUp');
+                    $div2.removeClass('fadeInRight');
+                    $div2.removeClass('ani');
+
+                    $('.sec2-bg-left2-1 img').stop().animate({"margin-top":"0","opacity":"0"},10);
+                    $('.sec2-bg-left2-2 img').stop().animate({"margin-top":"0","opacity":"0"},10);
+
+                    $('.sec1-nav').stop().animate({top: "0"},300);
+
+
+                }
+
+
+                //离开第二页且方向向下
+                else if(index == 2 && direction =='down'){
+
+                    var $div2=$('.sec2 div');
+                    $('.title2-content-bot').animate({width:"0",opacity:0},50);
+
+                    $div2.removeClass('meUp1');
+                    $div2.removeClass('meUp2');
+                    $div2.removeClass('meDown1');
+                    $div2.removeClass('meDown2');
+                    $div2.removeClass('meLeft1');
+                    $div2.removeClass('meLeft2');
+                    $div2.removeClass('fadeInDown');
+                    $div2.removeClass('fadeInUp');
+                    $div2.removeClass('fadeInRight');
+                    $div2.removeClass('ani');
+
+                    $('.sec2-bg-left2-1 img').stop().animate({"margin-top":"0","opacity":"0"},10);
+                    $('.sec2-bg-left2-2 img').stop().animate({"margin-top":"0","opacity":"0"},10);
+
+                    $('.sec1-nav').stop().animate({top: "-3.7rem"},300);
+                    $('.sec1-search-icon').show();
+                    $('.sec1-search-box').hide();
+                    $('.sec1-search-input').removeClass('on');
+                    $('.sec-search-menu a').removeClass('on');
+
+
+                }
+
+
+                //离开第三页且方向向上
+                else if(index == 3 && direction =='up' ){
+
+                    var $div3=$('.sec3 div');
+
+                    $div3.removeClass('ani');
+
+                    $('.sec1-nav').stop().animate({top: "0"},300);
+                }
+                //离开第三页且方向向下
+                else if(index == 3 && direction =='down' ){
+
+                    var $div3=$('.sec3 div');
+
+                    $div3.removeClass('ani');
+
+                    $('.sec1-nav').stop().animate({top: "-3.7rem"},300);
+                    $('.sec1-search-icon').show();
+                    $('.sec1-search-box').hide();
+                    $('.sec1-search-input').removeClass('on');
+                    $('.sec-search-menu a').removeClass('on');
+                }
+
+                //离开第四页且方向向上
+                else if(index == 4 && direction =='up' ){
+
+                    $('.sec1-nav').stop().animate({top: "0"},300);
+                }
+                //离开第四页且方向向下
+                else if(index == 4 && direction =='down' ){
+                    $('.sec1-nav').stop().animate({top: "-3.7rem"},300);
+                    $('.sec1-search-icon').show();
+                    $('.sec1-search-box').hide();
+                    $('.sec1-search-input').removeClass('on');
+                    $('.sec-search-menu a').removeClass('on');
+                }
+
+
+
+                //离开第五页
+                else if(index == 5 && direction =='up'){
+
+                    var $div5=$('.sec5 div');
+
+                    $div5.removeClass('meUp1');
+                    $div5.removeClass('meUp2');
+                    $div5.removeClass('meDown1');
+                    $div5.removeClass('meDown2');
+                    $div5.removeClass('meLeft1');
+                    $div5.removeClass('meLeft2');
+                    $div5.removeClass('fadeInDown');
+                    $div5.removeClass('fadeInUp');
+                    $div5.removeClass('meLeft1');
+
+                    $('.sec1-nav').stop().animate({top: "0"},300);
+
+                }
+            },
+
+
+
+            //进入某页
+            afterLoad: function(anchorLink, index){
+                var loadedSection = $(this);
+
+                //using index
+                if(index == 3){
+                    //alert("Section 3 ended loading");
+                }
+
+                //using anchorLink
+                //进入第一页
+                if(anchorLink == 'slide1'){
+
+                    //$('.sec1-title').addClass('animated fadeInUp');
+                    $('.sec1-title').addClass('ani');
+
+                    $('.sec1-bg-round').addClass('animated fadeInDown');
+
+                    $('.sec1-bg-top1').addClass('meDown1');
+                    $('.sec1-bg-top2').addClass('meDown1');
+
+                    $('.sec1-bg-bot1').addClass('meLeft1');
+                    $('.sec1-bg-bot2').addClass('meUp1');
+                    $('.sec1-bg-bot3').addClass('animated fadeInUp');
+                    $('.sec1-bg-bot4').addClass('meUp1');
+                    $('.sec1-bg-bot5').addClass('animated fadeInUp');
+                    $('.sec1-bg-bot6').addClass('ani');
+                    $('.sec1-bg-bot7').addClass('ani');
+                    $('.sec1-bg-bot8').addClass('ani');
+                    $('.sec1-bg-bot9').addClass('ani');
+                    $('.sec1-bg-bot10').addClass('ani');
+
+                    //中间小球动画效果
+//                    $('.sec1-bg-mid img:eq(5)').animate({opacity:1},150);
+//                    $('.sec1-bg-mid img:eq(4)').delay(150).animate({marginBottom:"2.4rem",opacity:1},150);
+//                    $('.sec1-bg-mid img:eq(3)').delay(300).animate({marginBottom:"2.4rem",opacity:1},150);
+//                    $('.sec1-bg-mid img:eq(2)').delay(450).addClass('ani').animate({marginBottom:"2.4rem"},150);
+//                    $('.sec1-bg-mid img:eq(1)').delay(600).animate({marginBottom:"3rem",opacity:1},200);
+//                    $('.sec1-bg-mid img:eq(0)').delay(750).animate({marginBottom:"3rem",opacity:1},300);
+
+                    $('.sec1-bg-mid img').addClass('ani');
+                    $('.sc1-round').addClass('ani');
+
+
+                }
+                //进入第二页
+                else if(anchorLink == 'slide2'){
+
+                    $('.sec2-bg-left1').addClass('animated fadeInDown');
+                    $('.sec2-bg-mid').addClass('animated fadeInDown');
+                    $('.sec2-bg-right1').addClass('animated fadeInDown');
+                    $('.sec2-bg-right2').addClass('meDown1');
+                    $('.sec2-bg-right3').addClass('animated fadeInRight');
+                    $('.sec2-bg-right4').addClass('animated fadeInDown');
+                    $('.sec2-bg-right5').addClass('ani');
+
+                    $('.title2-content-bot').animate({width:"50rem",opacity:1},1500);
+
+                    //左1小球
+                    $('.sec2-bg-left2-1 img:eq(0)').animate({opacity:1},150);
+                    $('.sec2-bg-left2-1 img:eq(1)').delay(150).animate({marginTop:"1.5rem",opacity:1},150);
+                    $('.sec2-bg-left2-1 img:eq(2)').delay(300).animate({marginTop:"1.5rem",opacity:1},150);
+                    $('.sec2-bg-left2-1 img:eq(3)').delay(450).animate({marginTop:"1.5rem",opacity:1},150);
+                    $('.sec2-bg-left2-1 img:eq(4)').delay(600).animate({marginTop:"1.5rem",opacity:1},200);
+                    $('.sec2-bg-left2-1 img:eq(5)').delay(750).animate({marginTop:"1.5rem",opacity:1},500);
+
+                    //左2小球
+                    $('.sec2-bg-left2-2 img:eq(0)').animate({opacity:1},150);
+                    $('.sec2-bg-left2-2 img:eq(1)').delay(150).animate({marginTop:"2rem",opacity:1},200);
+                    $('.sec2-bg-left2-2 img:eq(2)').delay(450).animate({marginTop:"3.2rem",opacity:1},200);
+                    $('.sec2-bg-left2-2 img:eq(3)').delay(600).animate({marginTop:"2.2rem",opacity:1},200);
+                    $('.sec2-bg-left2-2 img:eq(4)').delay(750).animate({marginTop:"3.7rem",opacity:1},200);
+                    $('.sec2-bg-left2-2 img:eq(5)').delay(900).animate({marginTop:"7.5rem",opacity:1},500);
+
+
+                }
+                //进入第三页
+                else if(anchorLink == 'slide3'){
+//                    $('.sec3-bg-left1').addClass('animated fadeInDown');
+//                    $('.sec3-bg-left2').addClass('meLeft1');
+//                    $('.sec3-bg-left3').addClass('animated fadeInUp');
+//                    $('.sec3-bg-right1').addClass('animated fadeInDown');
+//                    $('.sec3-bg-right2').addClass('animated fadeInRight');
+
+                    $('.title3-content-phone').addClass('ani');
+                    $('.t33-c').addClass('ani');
+
+                }
+                //进入第四页
+                else if(anchorLink == 'slide4'){
+                    //$('.logo').removeClass('logo-white');
+                    //$('.logo').addClass('logo-black');
+
+                }
+                //进入第五页
+                else if(anchorLink == 'slide5'){
+
+                    $('.sec5-bg-left2').addClass('meLeft1');
+                    $('.sec5-bg-left1').addClass('animated fadeInDown');
+                    $('.sec5-bg-left3').addClass('meUp1');
+                    $('.sec5-bg-right1').addClass('meDown1');
+                    $('.sec5-bg-right3').addClass('meUp2');
+                    $('.sec5-bg-right2').addClass('meLeft1');
+
+                }
+
+
+            }
+
+        });
+
+
+
+    });
+
+</script>
+
+
+
+</body>
+
+
+
+
+</html>

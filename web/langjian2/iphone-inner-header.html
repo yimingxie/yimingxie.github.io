@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<!--手机logo-->
+<div class="logo phone" style="position: absolute;">
+    <img src="images/logo-white.png" alt=""/>
+</div>
+
+
+<!--手机菜单按钮-->
+<div class="nav-btn phone" style="background: url('images/nav-btn-bg-w.png') no-repeat;background-size: 100% 100%;position: absolute;">
+    <div class="m-line">
+        <div class="menu-line menu-line1" style="background-color: #383a42;"></div>
+        <div class="menu-line menu-line2"  style="background-color: #383a42;">
+            <div class="ml2-line1" style="background-color: #383a42;"></div>
+            <div class="ml2-line2" style="background-color: #383a42;"></div>
+        </div>
+        <div class="menu-line menu-line3"  style="background-color: #383a42;"></div>
+    </div>
+</div>
+
+
+<!--手机导航菜单-->
+<div class="nav-menu" style="display: none;">
+    <div class="nav-menu-close"></div>
+
+    <ul>
+        <li><a href="index.html#slide1"><em>首页&nbsp;</em>Home</a></li>
+        <li><a href="index.html#slide2"><em>服务介绍&nbsp;</em>Service</a></li>
+        <li><a href="index.html#slide3"><em>产品案例&nbsp;</em>Works</a></li>
+        <li><a href="index.html#slide4"><em>关于我们&nbsp;</em>About</a></li>
+        <li><a href="index.html#slide5"><em>联系方式&nbsp;</em>Contact</a></li>
+    </ul>
+
+    <div class="phone-contact phone">
+        <div class="phc-a"><a href="#" style="background: url('images/menu-qq-phone.png') no-repeat center center;background-size: 3rem auto;"></a></div>
+        <div class="phc-a"><a href="#" style="background: url('images/menu-weixin-phone.png') no-repeat center center;background-size: 3rem auto;"></a></div>
+        <div class="phc-a"><a href="#" style="background: url('images/menu-xinlang-phone.png') no-repeat center center;background-size: 3rem auto;"></a></div>
+    </div>
+
+</div>
+
+
+
+<script>
+    $(function () {
+        //手机导航按钮
+        $('.nav-menu-close').click(function () {
+            $('.nav-menu').removeClass('animated bounceInRight').addClass('animated bounceOutRight');
+            setTimeout(function(){
+                $('.nav-btn').show();
+            },500);
+        });
+        $('.nav-menu a').click(function () {
+            $('.nav-menu').removeClass('animated bounceInRight').addClass('animated bounceOutRight');
+            setTimeout(function(){
+                $('.nav-btn').show();
+            },500);
+        });
+        $('.nav-btn').click(function () {
+            setTimeout(function () {
+                $('.nav-btn').hide();
+            },500);
+            $('.nav-menu').removeClass('animated bounceOutRight');
+            $('.nav-menu').show().addClass('animated bounceInRight');
+        });
+
+
+    })
+
+
+</script>
+
+
+
+</body>
+</html>

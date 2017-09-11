@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+
+<!--侧边栏-->
+<div class="nav-contact">
+    <div class="nav-contact-icon">
+        <div class="nav-contact-list"><a class="ncl-qq" href="http://weibo.com/u/5452454991?topnav=1&wvr=6&is_all=1"></a></div>
+        <div class="nav-contact-list">
+            <a class="ncl-weixin" href="#"></a>
+            <div class="ncl-dark">
+                <div class="ncl-dark-arrow"></div>
+                <div class="ncl-dark-img"><img src="images/ncl-dark-img.png" alt=""></div>
+            </div>
+        </div>
+        <div class="nav-contact-list"><a class="ncl-phone" href="index.html#slide5"></a></div>
+    </div>
+    <div class="nc-up-arrow"></div>
+</div>
+<div class="nav-contact-down"></div>
+
+
+
+
+<script>
+    $(function () {
+
+        //侧边栏展开与收缩
+        $('.nc-up-arrow').click(function () {
+            $('.nav-contact-icon').animate({height:"0.35rem",opacity:"0"},300);
+            //$('.nav-contact').animate({opacity:0},600);
+            setTimeout(function(){
+                $('.nav-contact').hide();
+                $('.nav-contact-down').show();
+                //$('.nav-contact-down').addClass('menu-rotate');
+            },300);
+        });
+        $('.nav-contact-down').click(function () {
+            $('.nav-contact-down').hide();
+            $('.nav-contact').show();
+            $('.nav-contact-icon').animate({height:"7.75rem",opacity:"1"},300);
+        });
+
+
+        //侧边栏微信弹出
+        $('.ncl-weixin').hover(function () {
+            $(this).next('.ncl-dark').show();
+        }, function () {
+            $('.ncl-dark').hide();
+        })
+
+
+    })
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

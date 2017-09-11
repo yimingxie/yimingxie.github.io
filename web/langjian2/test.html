@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="author" content="深圳方维网络科技有限公司  http://www.szfangwei.cn">
+    <meta name="renderer" content="webkit"/>
+
+    <title>test</title>
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.css"/>
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link href="//cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css-reset.css">
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="//cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.2.js"></script>
+    <script src="js/lightbox.min.js"></script>
+
+    <!--<script src="js/jquery.mobile-1.4.5.min.js"></script>-->
+    <!--<script src="//cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.js"></script>-->
+    <script src="js/hammer.min.js"></script>
+
+    <style>
+        .nav-test.on{position: fixed;top: 0;left: 0;}
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+<div style="height: 10000px;">
+    <div style="height: 300px;"></div>
+    <div class="nav-test" style="height: 100px;width: 100%;background-color: black;">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+    </div>
+
+</div>
+
+
+
+<script>
+    $(function () {
+
+        var bb=$('.nav-test').offset().top;
+
+
+        $(window).scroll(function () {
+            var topH=$(document).scrollTop();
+            var divH=$('.nav-test').offset().top;
+
+            var d=topH-divH;
+
+            console.log(topH +" " + divH );
+            console.log(d);
+
+            if(topH>=bb){
+                $('.nav-test').addClass('on');
+            }else {
+                $('.nav-test').removeClass('on');
+            }
+        })
+    })
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
