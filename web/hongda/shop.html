@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="">
+    <title>在线商城</title>
+    <link rel="stylesheet" href="css/idangerous.swiper.css"/>
+    <link rel="stylesheet" href="css/jquery.fullpage.css">
+    <link rel="stylesheet" href="css/css-reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/idangerous.swiper.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
+    <script src="js/basic.js"></script>
+
+
+    <!--[if lt IE 9]><script src="js/html5.js" ></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/selectivizr-min.js" ></script><![endif]-->
+
+
+</head>
+<body>
+
+
+<!--在线支付弹窗-->
+<div class="online-pay">
+    <div class="pay-dark"></div>
+    <div class="online-pay-content">
+        <form action="">
+            <div class="online-pay-wrap">
+                <div class="op-title">在线支付</div>
+                <div class="op-box">
+                    <input class="op-input1" placeholder="订单编号：01000000000" type="text">
+                </div>
+                <div class="op-box">
+                    <input class="op-input1" placeholder="支付金额: 500000" type="text">
+                </div>
+                <div class="op-brand">
+                    <a href="#"><img src="images/op-brand1.jpg" alt=""></a>
+                </div>
+                <div class="op-submit">
+                    <input type="submit" value="确认支付">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="shop">
+    <div class="section" style="background: url('images/about-bg.jpg') no-repeat center center;background-size: cover;">
+
+        <div class="side-nav ani">
+            <div class="side-nav-box" style="margin-top: 52px;">
+                <a href="about.html">
+                    <div class="snb-img"><img src="images/sn1-1.png" alt=""></div>
+                </a>
+            </div>
+            <div class="side-nav-box">
+                <a href="team.html">
+                    <div class="snb-img"><img src="images/sn1-2.png" alt=""></div>
+                </a>
+            </div>
+            <div class="side-nav-box" style="margin-top: 49px;">
+                <a href="partner.html">
+                    <div class="snb-img"><img src="images/sn1-3.png" alt=""></div>
+                </a>
+            </div>
+            <div class="side-nav-box">
+                <a href="shop.html">
+                    <div class="snb-img"><img src="images/sn1-4.png" alt=""></div>
+                </a>
+            </div>
+            <div class="side-nav-box">
+                <a href="detail.html#detail-contact">
+                    <div class="snb-img"><img src="images/sn1-5.png" alt=""></div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="wx-pay-box"></div>
+
+        <div class="about-content shop-content clearfix">
+            <div class="about-box shop-box clearfix">
+                <div class="about-box-img">
+                    <img src="images/shop-img1.jpg" alt="">
+                </div>
+                <div class="about-box-con" style="background: #16A64A;">
+                    <div class="abc-title">
+                        <div class="abc-title-line" style="background: #fff;"></div>
+                        <p style="color: #fff;">银联支付</p>
+                    </div>
+                    <div class="shop-pay union-pay">
+                        <div class="shop-pay-box">
+                            <a href="#"><img src="images/shop-pay1.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-fra"></div>
+            </div>
+
+            <div class="about-box shop-box clearfix">
+                <div class="about-box-img">
+                    <img src="images/shop-img2.jpg" alt="">
+                </div>
+                <div class="about-box-con">
+                    <div class="abc-title">
+                        <div class="abc-title-line"></div>
+                        <p>线上支付</p>
+                    </div>
+                    <div class="shop-pay wx-pay">
+                        <div class="shop-pay-box">
+                            <a href="##"><img src="images/shop-pay2.jpg" alt=""></a>
+                        </div>
+                        <div class="shop-pay-box">
+                            <a href="##"><img src="images/shop-pay3.jpg" alt=""></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="about-fra"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script>
+
+    $(function(){
+        $('#shop').fullpage();
+
+        //打开银联弹窗
+        $('.union-pay .shop-pay-box').click(function () {
+            $('.online-pay').show();
+        });
+        //关闭银联弹窗
+        $('.pay-dark').click(function () {
+            $('.online-pay').hide();
+        });
+
+
+        //打开二维码弹窗
+        $('.wx-pay .shop-pay-box').click(function () {
+
+            $.ajax({
+                url: 'weixin.html',//弹窗地址
+                data:{},
+                cache: false,
+                type: "GET",
+                success: function (obj) {
+                    $('.wx-pay-box').html(obj);
+                },
+            });
+            $('.wx-pay-box').show();//box为容器，用于存放join-detail.html的内容，默认隐藏
+        });
+
+
+    });
+
+
+</script>
+
+
+
+
+</body>
+</html>
