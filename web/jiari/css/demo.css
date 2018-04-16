@@ -1,0 +1,995 @@
+
+/*@import "https://fonts.googleapis.com/css?family=Baloo+Chettan|Gloria+Hallelujah";*/
+/*html, body, .anim-wrap {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin: 0;*/
+/*}*/
+
+/*body {*/
+    /*font-family: Helvetica Neueu, HelveticaNeueu, Helvetica, Arial, sans-serif;*/
+    /*overflow: hidden;*/
+/*}*/
+
+.anim-wrap {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.anim-text {*/
+    /*font: 4em "Baloo Chettan", Helvetica Neueu, HelveticaNeueu, Helvetica, Arial;*/
+    /*white-space: nowrap;*/
+    /*min-width: 1em;*/
+    /*min-height: 1.2em;*/
+    /*border-bottom: 1px solid transparent;*/
+    /*caret-color: #f20dcc;*/
+/*}*/
+.anim-text:empty, .anim-text:focus {
+    border-bottom-color: #f20dcc;
+    outline: none;
+}
+
+.char {
+    position: relative;
+    margin: 0 .05em;
+}
+
+.char,
+.letter-inner {
+    display: inline-block;
+}
+
+.anim[data-effect=fade] > .letter {
+    animation: fadeIn 1.5s backwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+.anim[data-effect=slide] > .letter {
+    animation: slide 1s backwards;
+    transform-origin: bottom left;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(90vw) skew(-17deg) scaleX(3);
+        animation-timing-function: ease-in;
+    }
+    80% {
+        transform: translateX(0) skew(-17deg) scaleX(3);
+        animation-timing-function: ease-out;
+    }
+    88% {
+        transform: translateX(0) skew(12deg) scaleX(0.8);
+        animation-timing-function: ease-in-out;
+    }
+    95% {
+        transform: translateX(0) skew(-5deg) scaleX(1);
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        transform: translateX(0) skew(0deg) scaleX(1);
+        animation-timing-function: ease-in-out;
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(70vw);
+    }
+}
+.anim[data-effect=roll] > .letter {
+    animation: rollIn 1.1s cubic-bezier(0, 0, 0.6, 1) backwards;
+}
+@keyframes rollIn {
+    from {
+        transform: translateX(90vw) rotate(1200deg);
+    }
+}
+.anim[data-effect=peel] > .letter {
+    animation: peelIn 2s backwards ease-in-out;
+}
+.anim[data-effect=peel] > .letter > .letter-inner {
+    animation: rotateY 1.3s 0.7s backwards ease-in;
+}
+@keyframes peelIn {
+    from {
+        transform: translate(-100vw, 0);
+    }
+}
+@keyframes rotateY {
+    from {
+        transform: scale(3) rotateY(180deg);
+    }
+}
+.anim[data-effect=swivel] > .letter:not(.space)::before {
+    background: currentColor;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .2;
+}
+.anim[data-effect=swivel] {
+    perspective: 100vmax;
+    perspective-origin: top;
+}
+.anim[data-effect=swivel] > .letter {
+    padding: 0 .1em;
+    animation: swivel 5s backwards;
+    transform-origin: top;
+}
+@keyframes swivel {
+    0% {
+        transform: rotateX(-90deg);
+    }
+    10% {
+        transform: rotateX(82deg);
+    }
+    20% {
+        transform: rotateX(-74deg);
+    }
+    30% {
+        transform: rotateX(66deg);
+    }
+    39% {
+        transform: rotateX(-58deg);
+    }
+    48% {
+        transform: rotateX(50deg);
+    }
+    56% {
+        transform: rotateX(-42deg);
+    }
+    63% {
+        transform: rotateX(35deg);
+    }
+    70% {
+        transform: rotateX(-28deg);
+    }
+    77% {
+        transform: rotateX(21deg);
+    }
+    83% {
+        transform: rotateX(-15deg);
+    }
+    89% {
+        transform: rotateX(9deg);
+    }
+    95% {
+        transform: rotateX(-4deg);
+    }
+    100% {
+        transform: none;
+    }
+}
+.anim[data-effect=hop] > .letter {
+    animation: slideIn 2s linear backwards;
+}
+.anim[data-effect=hop] > .letter > .letter-inner {
+    animation: hop .1s 20 alternate;
+}
+@keyframes hop {
+    to {
+        transform: translateY(-0.6em);
+    }
+}
+.anim[data-effect=wave] {
+    animation: slideIn 3s linear backwards;
+}
+.anim[data-effect=wave] > .letter {
+    animation: hop .15s 20 alternate;
+}
+.anim[data-effect=wave2] {
+    animation: slideIn 3s linear backwards;
+}
+.anim[data-effect=wave2] > .letter {
+    animation: inflate .5s 6 linear alternate;
+}
+@keyframes inflate {
+    to {
+        transform: scale(2);
+    }
+}
+.anim[data-effect=converge] > .letter {
+    animation: converge 2.5s forwards;
+}
+.anim[data-effect=converge] > .letter:nth-child(1n) {
+    transform: translate(75vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(2n) {
+    transform: translate(100vw, 90vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(3n) {
+    transform: translate(-100vw, 96vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(4n) {
+    transform: translate(1vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(5n) {
+    transform: translate(100vw, 24vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(6n) {
+    transform: translate(81vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(7n) {
+    transform: translate(-22vw, -100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(8n) {
+    transform: translate(46vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(9n) {
+    transform: translate(-5vw, -100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(10n) {
+    transform: translate(-45vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(11n) {
+    transform: translate(100vw, 49vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(12n) {
+    transform: translate(100vw, 75vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(13n) {
+    transform: translate(100vw, -6vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(14n) {
+    transform: translate(93vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(15n) {
+    transform: translate(22vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(16n) {
+    transform: translate(100vw, -47vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(17n) {
+    transform: translate(100vw, 47vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(18n) {
+    transform: translate(100vw, -13vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(19n) {
+    transform: translate(45vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(20n) {
+    transform: translate(100vw, -73vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(21n) {
+    transform: translate(100vw, 29vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(22n) {
+    transform: translate(-48vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(23n) {
+    transform: translate(86vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(24n) {
+    transform: translate(-100vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(25n) {
+    transform: translate(-8vw, -100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(26n) {
+    transform: translate(-100vw, 44vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(27n) {
+    transform: translate(100vw, 35vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(28n) {
+    transform: translate(41vw, -100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(29n) {
+    transform: translate(20vw, 100vh);
+}
+.anim[data-effect=converge] > .letter:nth-child(30n) {
+    transform: translate(23vw, -100vh);
+}
+@keyframes converge {
+    to {
+        transform: translate(0, 0);
+    }
+}
+.anim[data-effect=spiral] > .letter {
+    animation: spiral 3s ease-in both;
+}
+@keyframes spiral {
+    from {
+        transform: rotate(720deg) translateY(-60vmax);
+    }
+}
+.anim[data-effect=snow] > .letter {
+    animation: snow 5s cubic-bezier(0.68, 0.21, 0.7, 1) both;
+}
+.anim[data-effect=snow] > .letter > .letter-inner {
+    animation: sway 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) 5 alternate;
+}
+@keyframes snow {
+    from {
+        transform: translateY(-60vh);
+    }
+}
+@keyframes sway {
+    from {
+        transform: translate(2em, 0);
+    }
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .char {
+    margin: 0 .15em;
+    animation: 0.5s cubic-bezier(0.33, 0.08, 0.7, 0.32) forwards;
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 1) {
+    animation-name: meteorite;
+    transform: translate(-6.48389vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 1) > .letter-inner {
+    transform: translate(0.00419em, 0.00817em) rotate(4.47376deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 2) {
+    animation-name: meteorite;
+    transform: translate(5.18049vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 2) > .letter-inner {
+    transform: translate(-0.07254em, 0.13755em) rotate(5.32154deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 3) {
+    animation-name: meteorite;
+    transform: translate(2.06164vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 3) > .letter-inner {
+    transform: translate(0.07569em, -0.06822em) rotate(-2.04423deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 4) {
+    animation-name: meteorite;
+    transform: translate(11.67581vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 4) > .letter-inner {
+    transform: translate(-0.08246em, -0.05575em) rotate(6.00681deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 5) {
+    animation-name: meteorite;
+    transform: translate(-5.87888vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 5) > .letter-inner {
+    transform: translate(-0.09508em, 0.03611em) rotate(9.84507deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 6) {
+    animation-name: meteorite;
+    transform: translate(-12.65403vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 6) > .letter-inner {
+    transform: translate(0.09428em, -0.11027em) rotate(-3.95578deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 7) {
+    animation-name: meteorite;
+    transform: translate(-11.97834vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 7) > .letter-inner {
+    transform: translate(0.09765em, 0.12939em) rotate(0.71265deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 8) {
+    animation-name: meteorite;
+    transform: translate(20.20496vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 8) > .letter-inner {
+    transform: translate(0.01126em, 0.06191em) rotate(-8.7214deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 9) {
+    animation-name: meteorite;
+    transform: translate(-12.55705vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 9) > .letter-inner {
+    transform: translate(-0.03434em, 0.02092em) rotate(-7.69682deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 10) {
+    animation-name: meteorite;
+    transform: translate(5.38038vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 10) > .letter-inner {
+    transform: translate(-0.08378em, 0.05044em) rotate(1.84531deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 11) {
+    animation-name: meteorite;
+    transform: translate(15.69186vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 11) > .letter-inner {
+    transform: translate(0.02974em, 0.02838em) rotate(4.91783deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 12) {
+    animation-name: meteorite;
+    transform: translate(19.18768vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 12) > .letter-inner {
+    transform: translate(-0.06485em, 0.04586em) rotate(-8.62222deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 13) {
+    animation-name: meteorite;
+    transform: translate(-17.87654vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 13) > .letter-inner {
+    transform: translate(-0.09121em, 0.14768em) rotate(-7.50893deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 14) {
+    animation-name: meteorite;
+    transform: translate(11.51431vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 14) > .letter-inner {
+    transform: translate(0.07816em, 0.05717em) rotate(3.5439deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 15) {
+    animation-name: meteorite;
+    transform: translate(-12.47477vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 15) > .letter-inner {
+    transform: translate(-0.05039em, -0.00396em) rotate(9.19099deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 16) {
+    animation-name: meteorite;
+    transform: translate(-11.11034vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 16) > .letter-inner {
+    transform: translate(0.00633em, 0.06642em) rotate(5.04956deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 17) {
+    animation-name: meteorite;
+    transform: translate(9.87686vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 17) > .letter-inner {
+    transform: translate(-0.0775em, 0.13518em) rotate(6.98645deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 18) {
+    animation-name: meteorite;
+    transform: translate(-21.54326vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 18) > .letter-inner {
+    transform: translate(0.08587em, 0.09876em) rotate(1.97567deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 19) {
+    animation-name: meteorite;
+    transform: translate(-2.42744vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 19) > .letter-inner {
+    transform: translate(-0.03162em, 0.0945em) rotate(-6.59714deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 20) {
+    animation-name: meteorite;
+    transform: translate(2.77545vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 20) > .letter-inner {
+    transform: translate(0.05479em, 0.06678em) rotate(-2.68341deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 21) {
+    animation-name: meteorite;
+    transform: translate(-3.54171vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 21) > .letter-inner {
+    transform: translate(0.0764em, -0.04548em) rotate(3.42587deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 22) {
+    animation-name: meteorite;
+    transform: translate(-18.77978vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 22) > .letter-inner {
+    transform: translate(0.02712em, -0.09712em) rotate(1.63188deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 23) {
+    animation-name: meteorite;
+    transform: translate(-20.94836vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 23) > .letter-inner {
+    transform: translate(-0.07261em, 0.12161em) rotate(-3.91319deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 24) {
+    animation-name: meteorite;
+    transform: translate(-21.87819vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 24) > .letter-inner {
+    transform: translate(-0.01437em, 0.0646em) rotate(-6.31852deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 25) {
+    animation-name: meteorite;
+    transform: translate(-20.51654vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 25) > .letter-inner {
+    transform: translate(-0.0084em, -0.03249em) rotate(-3.0008deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 26) {
+    animation-name: meteorite;
+    transform: translate(-9.12595vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 26) > .letter-inner {
+    transform: translate(-0.00576em, 0.13715em) rotate(2.74989deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 27) {
+    animation-name: meteorite;
+    transform: translate(-4.6315vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 27) > .letter-inner {
+    transform: translate(-0.03443em, 0.06653em) rotate(-2.0605deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 28) {
+    animation-name: meteorite;
+    transform: translate(-6.03076vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 28) > .letter-inner {
+    transform: translate(-0.02798em, -0.09215em) rotate(-6.00461deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 29) {
+    animation-name: meteorite;
+    transform: translate(20.93875vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 29) > .letter-inner {
+    transform: translate(-0.07571em, 0.14403em) rotate(3.03374deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 30) {
+    animation-name: meteorite;
+    transform: translate(-10.57748vw, -60vh);
+}
+.anim[data-effect=meteorite] > .letter:nth-child(30n + 30) > .letter-inner {
+    transform: translate(0.04664em, -0.04971em) rotate(5.38089deg);
+}
+@keyframes meteorite {
+    to {
+        transform: none;
+    }
+}
+.anim[data-effect=bounce] > .letter {
+    animation: bounce 2s ease-in both;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(-60vh);
+        animation-timing-function: cubic-bezier(0.5, 0, 0.82, 0.52);
+    }
+    37% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0.18, 0.48, 0.5, 1);
+    }
+    55% {
+        transform: translateY(-25vh);
+        animation-timing-function: cubic-bezier(0.5, 0, 0.82, 0.52);
+    }
+    73% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0.18, 0.48, 0.5, 1);
+    }
+    81% {
+        transform: translateY(-10vh);
+        animation-timing-function: cubic-bezier(0.5, 0, 0.82, 0.52);
+    }
+    89% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0.18, 0.48, 0.5, 1);
+    }
+    93% {
+        transform: translateY(-4vh);
+        animation-timing-function: cubic-bezier(0.5, 0, 0.82, 0.52);
+    }
+    97% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0.18, 0.48, 0.5, 1);
+    }
+    98.5% {
+        transform: translateY(-1.1vh);
+        animation-timing-function: cubic-bezier(0.5, 0, 0.82, 0.52);
+    }
+    100% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0.18, 0.48, 0.5, 1);
+    }
+}
+.anim[data-effect=float] > .letter {
+    animation: float 18s ease-in-out backwards;
+}
+.anim[data-effect=float] > .letter > .letter-inner {
+    animation: float-perpetual ease-in-out 10s 18s infinite alternate;
+}
+@keyframes float {
+    0% {
+        transform: translateY(60vh);
+    }
+    33% {
+        transform: translateY(-8vh);
+    }
+    51% {
+        transform: translateY(6vh);
+    }
+    66% {
+        transform: translateY(-4vh);
+    }
+    80% {
+        transform: translateY(3vh);
+    }
+    91% {
+        transform: translateY(-1.3vh);
+    }
+    100% {
+        transform: none;
+    }
+}
+@keyframes float-perpetual {
+    0% {
+        transform: translateY(0);
+    }
+    37% {
+        transform: translateY(-1.5vh);
+    }
+    58% {
+        transform: translateY(1.3vh);
+    }
+    81% {
+        transform: translateY(-1vh);
+    }
+    100% {
+        transform: translateY(0.8vh);
+    }
+}
+.anim[data-effect=bubble] > .letter {
+    position: relative;
+    animation: bubble-letter 1.3s cubic-bezier(0, 0, 0.33, 1) both;
+}
+.anim[data-effect=bubble] > .letter::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid;
+    border-radius: 999px;
+    animation: bubble 2.6s cubic-bezier(0, 0.41, 0.28, 1) both;
+    animation-delay: inherit;
+}
+.anim[data-effect=bubble] > .letter::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: currentColor;
+    border-radius: 999px;
+    animation: bubble 2.6s cubic-bezier(0, 0.41, 0.28, 1) both;
+    animation-delay: inherit;
+    opacity: 0.3;
+}
+@keyframes bubble-letter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes bubble {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: 10em;
+        height: 10em;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.btn, .control {
+    padding: .5em 1em;
+    font-size: 1.2em;
+}
+
+.btn {
+    background: #f20dcc;
+    border: 1px solid transparent;
+    color: white;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn:hover, .btn:focus {
+    background: #f655db;
+}
+
+select {
+    border: none;
+    outline-color: #f20dcc;
+}
+
+#controls {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border-bottom-left-radius: 5px;
+    box-shadow: -1px 2px 13px rgba(51, 0, 43, 0.4);
+}
+
+#controls button {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    border-bottom-left-radius: 5px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.alert {
+    position: absolute;
+    bottom: -1.6em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .4em 1em 2em;
+    background: #f20dcc;
+    color: #fff0fc;
+    animation: 2s 40s peep-in both ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 -1px 6px 1px rgba(242, 13, 204, 0.3);
+}
+.alert.close {
+    animation: peep-out .8s linear both;
+}
+
+@keyframes peep-in {
+    0% {
+        transform: translate(-50%, 100%);
+        animation-timing-function: linear;
+    }
+    76% {
+        transform: translate(-50%, -18%);
+    }
+    90% {
+        transform: translate(-50%, -20%);
+    }
+    98% {
+        transform: translate(-50%, 8%);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+@keyframes peep-out {
+    to {
+        transform: translate(-50%, 100%);
+        visibility: hidden;
+    }
+}
+.dismiss {
+    border: none;
+    background: #ff70e7;
+    color: white;
+    padding: .2em .5em;
+    cursor: pointer;
+    margin-left: .2em;
+}
+
+.tip {
+    position: absolute;
+    color: #f20dcc;
+    animation: show-tip .5s 15s ease-in both;
+    font-size: 1.3rem;
+    font-family: "Gloria Hallelujah", cursive;
+}
+@keyframes show-tip {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.tip .text {
+    text-shadow: -1px 2px 4px rgba(51, 0, 43, 0.2);
+}
+.tip strong {
+    font-weight: normal;
+}
+.tip svg {
+    width: 110px;
+    height: auto;
+    -webkit-filter: drop-shadow(-1px 3px 5px rgba(51, 0, 43, 0.3));
+    filter: drop-shadow(-1px 3px 5px rgba(51, 0, 43, 0.3));
+    animation: show-tip .5s 15.1s ease-in both;
+}
+.tip svg path {
+    fill: #f20dcc;
+}
+@keyframes show-tip-arrow {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0);
+    }
+    85% {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+}
+.tip-effect {
+    left: -120px;
+    top: .5em;
+    animation-delay: 20s;
+}
+.tip-effect .text {
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    margin-left: -40px;
+}
+.tip-effect svg {
+    animation-delay: 20.1s;
+}
+
+.tip-type {
+    display: flex;
+    left: 50%;
+    top: calc(50% - 6rem);
+    transform: translateX(-50%);
+    animation-delay: 12s;
+}
+.tip-type svg {
+    animation-delay: 12.1s;
+    width: 40px;
+    height: 40px;
+    margin-top: .8em;
+    margin-left: 20px;
+    transform: rotate(-9deg);
+    -webkit-filter: drop-shadow(0px 1px 3px rgba(51, 0, 43, 0.3));
+    filter: drop-shadow(0px 1px 3px rgba(51, 0, 43, 0.3));
+}

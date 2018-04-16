@@ -1,0 +1,591 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=0">
+	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="author" content="">
+	<title>文字测试</title>
+
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/lightbox.css">
+	<link rel="stylesheet" href="css/css-reset.css"/>
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/media.css">
+
+	<script src="js/demo.js"></script>
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/idangerous.swiper.min.js"></script>
+	<script src="js/basic.js"></script>
+
+
+	<!--[if lt IE 9]><script src="js/html5.js" ></script><![endif]-->
+	<!--[if lt IE 9]><script src="js/selectivizr-min.js" ></script><![endif]-->
+
+
+</head>
+<body>
+
+<div class="anim-wrap1">
+	<div class="anim-text" data-effect="hop">www.17sucai.com</div>
+	<br>
+	<div class="anim-text1" data-effect="hop">www.17sucai.com</div>
+</div>
+
+<div id="controls">
+	<select name="selectEffect" id="selectEffect" class="control">
+		<option value="fade">Fade in</option>
+		<option value="slide">Slide in</option>
+		<option value="roll">Roll in</option>
+		<option value="hop">Hop in</option>
+		<option value="converge">Converge</option>
+		<option value="spiral">Spiral</option>
+		<option value="snow">Snow</option>
+		<option value="meteorite">Meteorite</option>
+		<option value="bounce">Bounce</option>
+		<option value="peel">Peel</option>
+		<option value="swivel">Swivel</option>
+		<option value="float">Float</option>
+		<option value="bubble">Bubble</option>
+	</select>
+	<div>
+		<button class="btn animate">Animate</button>
+	</div>
+
+	<!--<div class="tip tip-effect">-->
+		<!--<svg width="100px" height="100px" viewBox="0 0 100 100">-->
+			<!--<path d="M87.7,10.2c0,0-0.5,0-1.6,0c-1,0-2.5,0-4.4,0.1c-0.9,0-2,0.1-3.1,0.2c-1.1,0-2.3,0.2-3.6,0.3c-1.3,0.1-2.7,0.4-4.1,0.6-->
+				<!--c-0.7,0.1-1.5,0.2-2.2,0.4c-0.7,0.2-1.5,0.3-2.3,0.5c-3.1,0.6-6.5,1.7-9.9,2.9c-3.4,1.3-7,2.8-10.5,4.8c-3.5,2-6.9,4.4-10.1,7.1-->
+				<!--c-3.2,2.8-6,6-8.6,9.4l-1.9,2.6l-1.8,2.6c-0.6,0.9-1.1,1.8-1.7,2.7c-0.6,0.9-1.1,1.8-1.7,2.7c-2.2,3.6-4.1,7.3-5.9,10.8-->
+				<!--C12.5,61.4,11,65,9.7,68.4c-0.6,1.7-1.3,3.4-1.8,5.1c-0.5,1.7-1,3.3-1.5,4.8c-0.9,3.1-1.6,6-2.2,8.6c-0.3,1.3-0.5,2.5-0.8,3.6-->
+				<!--c-0.2,1.1-0.4,2.1-0.6,3.1c-0.4,1.9-0.5,3.3-0.7,4.3c-0.2,1-0.2,1.5-0.2,1.5l0,0c0,0.2-0.2,0.3-0.4,0.3c-0.2,0-0.3-0.2-0.3-0.4-->
+				<!--c0,0,0.1-0.5,0.2-1.5c0.1-1,0.3-2.5,0.6-4.4c0.1-0.9,0.3-2,0.5-3.1C2.8,89.2,3,88,3.2,86.7c0.5-2.6,1.1-5.5,1.8-8.7-->
+				<!--c0.8-3.2,1.7-6.6,2.8-10.2c1.2-3.6,2.4-7.3,4-11.1c1.6-3.8,3.5-7.6,5.7-11.3c2.3-3.7,4.9-7.3,7.8-10.5c2.9-3.3,6.1-6.3,9.4-9.1-->
+				<!--c3.3-2.8,6.8-5.3,10.2-7.4c3.5-2.1,7.1-3.9,10.7-5.2c0.9-0.3,1.8-0.6,2.7-0.9c0.9-0.3,1.7-0.6,2.6-0.8c1.7-0.4,3.4-0.9,5-1.1-->
+				<!--c0.8-0.1,1.6-0.3,2.4-0.4c0.8-0.1,1.5-0.2,2.3-0.3c1.5-0.2,2.9-0.3,4.2-0.4c1.3,0,2.6-0.2,3.7-0.1c1.2,0,2.2,0,3.2,0-->
+				<!--c1.9,0,3.4,0.2,4.4,0.3c1,0.1,1.6,0.1,1.6,0.1c0.2,0,0.3,0.2,0.3,0.4C88,10.1,87.9,10.2,87.7,10.2z"/>-->
+			<!--<path d="M79.9,20.8c0.5-0.7,1.1-1.4,1.7-2c0.6-0.6,1.2-1.3,1.9-1.9c0.7-0.6,1.3-1.1,2-1.7c0.4-0.3,0.7-0.5,1.1-0.8-->
+				<!--c0.4-0.2,0.7-0.5,1.1-0.7c1.5-0.9,3-1.7,4.6-2.5l2.3-1.1c0.8-0.3,1.5-0.8,2.3-1.2l0,1.7L94,9.4c-0.9-0.5-1.9-1-2.9-1.4-->
+				<!--c-2-0.8-4-1.5-6-2.1L79,4c-1-0.3-2-0.7-3.1-1.1c-1-0.4-2-0.9-2.9-1.5c-0.1-0.1-0.1-0.3-0.1-0.4C73,0.9,73.2,0.9,73.3,1l0,0-->
+				<!--c0.8,0.6,1.8,1,2.8,1.3c1,0.4,2,0.6,3.1,0.9l6.2,1.6c2.1,0.5,4.2,1.1,6.2,1.8c1,0.3,2.1,0.7,3.1,1.1c1,0.4,2,0.9,3,1.4l1.6,1-->
+				<!--l-1.7,0.7c-1.6,0.7-3.1,1.4-4.7,2.2c-1.5,0.7-3,1.5-4.5,2.3c-0.7,0.4-1.4,0.9-2.1,1.3c-0.7,0.4-1.4,0.9-2.1,1.4-->
+				<!--c-0.7,0.5-1.4,1-2,1.5c-0.3,0.3-0.7,0.5-1,0.8l-1,0.9c-0.1,0.1-0.4,0.1-0.5,0C79.8,21.1,79.8,20.9,79.9,20.8z"/>-->
+		<!--</svg>-->
+		<!--<div class="text">-->
+			<!--<strong>Check out other effects</strong>-->
+		<!--</div>-->
+	<!--</div>-->
+</div>
+
+
+<!--<div class="alert alert-come-back">-->
+	<!--<strong>Come back again for new effects!</strong>-->
+	<!--<button class="dismiss">OK</button>-->
+<!--</div>-->
+
+
+
+<script>
+    'use strict';
+
+
+    const util = {
+        math: {
+            degToRad: alpha => alpha * Math.PI / 180,
+
+        polarToDecart: (alpha, r) => {
+        alpha = this.degToRad(alpha);
+    return {x: r * Math.cos(alpha), y: r * Math.sin(alpha)};
+    }
+    },
+
+    color: {
+        random: (opts = {}) => {
+            let h, s, l;
+
+            h = opts.hue || Math.floor(Math.random() * 360);
+            s = opts.saturation || Math.floor(Math.random() * 101);
+            l = opts.lightness || Math.floor(Math.random() * 101);
+
+//            return `hsl(${h}, ${s}%, ${l}%)`; //随机颜色控制
+        }
+    }
+    };
+
+
+
+
+    /**
+     * Make a contenteditable element more controllable
+     */
+    class FunkyLetters {
+        /**
+         * Constructor
+         * @param  {Element} el  document element with contenteditable=true or selector
+         * @param  {Object} [opts] options
+         */
+        constructor(el, opts = {}) {
+            if(typeof el == 'string') {
+                el = document.querySelector(el);
+            }
+            this.container = el;
+            this.options = opts;
+            this._splitLetters();
+            this._listenToInput();
+        }
+
+
+        /**
+         * Split container's text into one letter spans optionally colored
+         */
+        _splitLetters() {
+            this.container.innerHTML = FunkyLetters.splitTextLetters(this.container.textContent, this.options);
+        }
+
+
+        /**
+         * Split the text into one letter spans
+         * @param  {string} text input text
+         * @param  {Object} [opts] options
+         * @return {string}      html with text split into letters
+         */
+        static splitTextLetters(text, opts = {}) {
+            let letters;
+
+            text = text.replace(/\s+/, ' ');
+            letters = text.split(/(?=.)/);
+
+            return letters.reduce((a, b) => a + FunkyLetters.makeLetterHtml(b, opts), '');
+        }
+
+
+        /**
+         * Generate html string for a letter
+         * @param  {string} letter single letter
+         * @param  {Object} [opts]   options
+         * @return {string}        html string
+         */
+        static makeLetterHtml(letter, opts = {}) {
+            let style = '',
+                className = 'char';
+
+            if(/\s/.test(letter)) {
+                letter = ' ';
+                className += ' space';
+            } else {
+                className += ' letter';
+            }
+            if(opts.colorize) {
+                style += 'color:' + util.color.random({saturation: 100, lightness: 50}) + ';';
+            }
+
+            return `<span class="${className}" ${style && 'style="' + style + '"'}><span class="letter-inner">${letter}</span></span>`;
+        }
+
+
+        /**
+         * Watch input
+         */
+        _listenToInput() {
+            let me = this;
+            // this.container.dataset.text = this.container.textContent;
+
+            this.container.addEventListener('keydown', function(e) {
+                let letterEl = me.getFocusLetter();
+
+                if(e.key.length === 1 && !e.altKey && !e.ctrlKey) {
+                    e.preventDefault();
+                    me.insertText(e.key);
+                    return;
+                }
+
+                // If the container is empty
+                if(!letterEl) return;
+
+                switch(e.key) {
+                    // Firefox focuses in two steps on inline-block elements
+                    case 'ArrowRight':
+                        if(navigator.userAgent.indexOf('AppleWebKit') !== -1) break;
+                        if(!letterEl.nextElementSibling) break;
+                        e.preventDefault();
+                        me.setFocus(letterEl.nextElementSibling, 1);
+                        break;
+
+                    case 'ArrowLeft':
+                        if(navigator.userAgent.indexOf('AppleWebKit') !== -1) break;
+                        e.preventDefault();
+                        if(!letterEl.previousElementSibling) {
+                            me.setFocus(letterEl, 0);
+                        } else {
+                            me.setFocus(letterEl.previousElementSibling, 1);
+                        }
+                        break;
+
+                    case 'ArrowUp':
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        break;
+
+                    case 'Home':
+                    case 'PageUp':
+                        e.preventDefault();
+                        me.setFocus(this.firstElementChild, 0);
+                        break;
+
+                    case 'End':
+                    case 'PageDown':
+                        e.preventDefault();
+                        me.setFocus(this.lastElementChild, 1);
+                        break;
+                }
+            });
+
+            this.container.addEventListener('input', function(e) {
+                // Firefox leaves empty containers when text is deleted. Make sure those are deleted too.
+                me._cleanEmpty();
+            });
+
+            this.container.addEventListener('paste', function(e) {
+                if(e.clipboardData.types.indexOf('text/plain') != -1) {
+                    e.preventDefault();
+                    me.insertText(e.clipboardData.getData('text/plain'));
+                }
+            });
+        }
+
+        /**
+         * Format text and insert it into the container at the caret position
+         * @param  {string} text the text to insert
+         */
+        insertText(text) {
+            let sel = document.getSelection(),
+                range = document.createRange(),
+                node = this.getFocusLetter(),
+                isBeforeNode = sel.focusOffset === 0;
+
+            sel.deleteFromDocument();
+            if(!node) {
+                this.container.insertAdjacentHTML('afterbegin', FunkyLetters.splitTextLetters(text, this.options));
+                this.setFocus(Array.from(this.container.querySelectorAll('.char')).pop(), 1);
+            } else if(isBeforeNode) {
+                node.insertAdjacentHTML('beforebegin', FunkyLetters.splitTextLetters(text, this.options));
+                this.setFocus(node.previousElementSibling, 1);
+            } else {
+                node.insertAdjacentHTML('afterend', FunkyLetters.splitTextLetters(text, this.options));
+                for(let i = text.length; i > 0 && node.nextElementSibling; i--) {
+                    node = node.nextElementSibling;
+                }
+                this.setFocus(node, node.textContent.length);
+            }
+
+            this.container.dataset.changed = true;
+            this._cleanEmpty();
+        }
+
+        /**
+         * Get the character in focus (at caret position)
+         * @return {Element} the element node in focus
+         */
+        getFocusLetter() {
+            const sel = document.getSelection();
+            return sel.anchorNode.closest ? sel.anchorNode.closest('.char') : sel.anchorNode.parentElement.closest('.char');
+        }
+
+        /**
+         * Set cursor position
+         * @param {Element} node   letter element to focus on
+         * @param {Integer} offset offset. In our case, either 0 or 1
+         */
+        setFocus(node, offset) {
+            const sel = document.getSelection(),
+                range = document.createRange();
+
+            range.setStart(node, offset);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+
+        /**
+         * Delete elements other than .char the browser could have generated
+         */
+        _cleanEmpty() {
+            const focusLetter = this.getFocusLetter();
+            Array.from(this.container.children).forEach(el => {
+                if(el.classList.contains('char') && el.textContent) return;
+            if(el === focusLetter) {
+                if(el.previousElementSibling) {
+                    this.setFocus(el, 1);
+                } else if (el.nextElementSibling) {
+                    this.setFocus(el.nextElementSibling, 1);
+                }
+            }
+            el.remove();
+        });
+        }
+    }
+
+
+
+
+
+    /**
+     * Control animations of an element's children
+     */
+    class Animator {
+        /**
+         * Constructor
+         * @param  {Element|string} el the container element whose children are being animated
+         */
+        constructor(el) {
+            this.container = el;
+            this._removeClassTimer = null;
+
+            // this.container.addEventListener('animationend', () => {
+            // 	clearTimeout(this._removeClassTimer);
+            // 	this._removeClassTimer = setTimeout(() => {
+            // 		this.container.classList.remove('anim');
+            // 	}, 900);
+            // });
+        }
+
+
+        /**
+         * Run animation using the effect
+         * @param  {string} effect effect name
+         */
+        animate(effect) {
+            const cont = this.container;
+            if(cont.classList.contains('anim')) {
+                cont.classList.remove('anim');
+                setTimeout(() => {
+                    this.animate(effect);
+            }, 50);
+                return;
+            }
+            clearTimeout(this._removeClassTimer);
+            cont.classList.add('anim');
+            if(cont.dataset.effect === effect && !('changed' in cont.dataset)) return;
+            cont.dataset.effect = effect;
+            delete cont.dataset.changed;
+            // if(effect !== 'converge'/* && effect !== 'spiral'*/ && effect !== 'meteorite') {
+            // 	Array.prototype.forEach.call(cont.children, function(el) {
+            // 		el.style.transform = '';
+            // 	});
+            // }
+            if(!Animator.effects[effect]) {
+                throw new Error(`Animator: effect ${effect} is not defined`);
+            }
+            if(Animator.effects[effect].delays) {
+                this.distributeDelays(Animator.effects[effect].delays);
+            } else {
+                this.distributeDelays({shift: false});
+            }
+        }
+
+
+        /**
+         * Distribute animation delays
+         * @param  {Object} opts           options
+         * @param  {Object} opts.shift     shift each next item this much milliseconds
+         * @param  {Object} [opts.random]  distribute delays randomly: without regard to document order
+         * @param  {Object} [opts.reverse] distribute delays in reverse document order starting with the last element
+         */
+        distributeDelays(opts) {
+            let shift = opts.shift != null ? opts.shift : 100,
+                curShift = 0,
+                els = Array.from(this.container.children);
+
+            if(opts.random) {
+                let newEls = [];
+                for(let j = 0, l = els.length; j < l; j++) {
+                    let i = Math.floor(Math.random() * els.length);
+                    newEls.push(els.splice(i, 1)[0]);
+                }
+                els = newEls;
+            }
+            if(opts.reverse) {
+                els = els.reverse();
+            }
+
+            els.forEach(el => {
+                curShift += typeof shift == 'object' ? Math.round(Math.random() * (shift.max - shift.min) + shift.min) : shift;
+            el.style.animationDelay = el.querySelector('.letter-inner').style.animationDelay = '';
+            if(shift === false) return;
+            el.style.animationDelay = (parseFloat(getComputedStyle(el, null).animationDelay) + curShift/1000) + 's';
+            el.querySelector('.letter-inner').style.animationDelay = (parseFloat(getComputedStyle(el.querySelector('.letter-inner'), null).animationDelay) + curShift/1000) + 's';
+        });
+        }
+
+
+        /**
+         * Distribute children's offset positions
+         * We are currently doing this in Sass
+         * @param  {Object} opts options
+         */
+        distributeOffsets(opts) {
+            let coords,
+                alpha = opts.minAngle || 0,
+                x = 100,
+                y = 100,
+                els = this.container.children;
+
+            for(let i = 0; i < els.length; i++) {
+                if(opts.dx || opts.dy) {
+                    x -= opts.dx || 0;
+                    y -= opts.dy || 0;
+                } else {
+                    if(opts.random) {
+                        alpha = Math.random * (opts.maxAngle || 360 - opts.minAngle || 0) + opts.minAngle || 0;
+                        coords = util.math.polarToDecart(alpha, 100);
+                    } else {
+                        coords = util.math.polarToDecart(alpha, 100);
+                        alpha += opts.dAlpha;
+                    }
+                    x = coords.x;
+                    y = coords.y;
+                }
+                els[i].style.transform = 'translate(' + x.toFixed(3) + 'vmax,' + y.toFixed(3) +'vmax)';
+            }
+        }
+    }
+    /**
+     * The available animation effects and their settings
+     * @type {Object}
+     */
+    Animator.effects = {
+        roll: {
+            delays: {shift: 100}
+        },
+        slide: {
+            delays: {shift: 100}
+        },
+        swivel: {
+            delays: {shift: 100, random: true}
+        },
+        peel: {
+            delays: {shift: 70}
+        },
+        wave: {
+            delays: {shift: 30}
+        },
+        wave2: {
+            delays: {shift: 120}
+        },
+        hop: {
+            delays: {shift: 140}
+        },
+        converge: {
+            delays: {shift: false}
+        },
+        fade: {
+            delays: {shift: 80, random: true}
+        },
+        snow: {
+            delays: {shift: 600, random: true}
+        },
+        spiral: {
+            delays: {shift: 100}
+        },
+        meteorite: {
+            delays: {shift: 50, random: true}
+        },
+        bounce: {
+            delays: {shift: 200, random: true}
+        },
+        float: {
+            delays: {shift: 400, random: true}
+        },
+        bubble: {
+            delays: {shift: {min: 200, max: 500}, random: true}
+        },
+    };
+
+
+
+
+
+    const animationContainer = document.querySelector('.anim-text');
+    const animationContainer1 = document.querySelector('.anim-text1');
+
+    let config = localStorage['funkyLetters:config'];
+    try {
+        config = JSON.parse(config);
+    } catch(e) {
+        config = {
+            completed: {}
+        };
+    }
+
+    // Tips
+//    if(config.completed.changeEffect) {
+//        document.querySelector('.tip-effect').classList.add('hide');
+//    } else {
+//        document.querySelector('#selectEffect').addEventListener('change', () => {
+//            document.querySelector('.tip-effect').classList.add('hide');
+//        config.completed.changeEffect = true;
+//        localStorage['funkyLetters:config'] = JSON.stringify(config);
+//    }, {once: true});
+//    }
+//
+//    if(config.completed.type) {
+//        document.querySelector('.tip-type').classList.add('hide');
+//    } else {
+//        animationContainer.addEventListener('keydown', () => {
+//            document.querySelector('.tip-type').classList.add('hide');
+//        config.completed.type = true;
+//        localStorage['funkyLetters:config'] = JSON.stringify(config);
+//    }, {once: true});
+//    }
+//
+//    if(config.completed.comeBack) {
+//        document.querySelector('.alert-come-back').classList.add('hide');
+//    }
+
+
+    new FunkyLetters(animationContainer, {colorize: true});
+    new FunkyLetters(animationContainer1, {colorize: true});
+
+    const animator = new Animator(animationContainer);
+    const animator1 = new Animator(animationContainer1);
+//    animator.animate(document.querySelector('#selectEffect').value);
+    animator.animate("fade");
+    animator1.animate("slide");
+
+
+
+    // Listen to controls
+    document.querySelector('#selectEffect').addEventListener('change', function(e) {
+        animator.animate(this.value);
+    });
+    document.querySelector('.animate').addEventListener('click', function(e) {
+        animator.animate(document.querySelector('#selectEffect').value);
+    });
+
+
+    // Animate on enter key
+//    animationContainer.addEventListener('keydown', function(e) {
+//        switch(e.keyCode) {
+//            case 13:
+//                e.preventDefault();
+//                document.querySelector('.animate').focus();
+//                document.querySelector('.animate').click();
+//                break;
+//        }
+//    });
+
+
+
+
+    // Other
+//    document.querySelector('.dismiss').addEventListener('click', function(e) {
+//        this.closest('.alert').classList.add('close');
+//        config.completed.comeBack = true;
+//        localStorage['funkyLetters:config'] = JSON.stringify(config);
+//    });
+</script>
+</body>
+</html>

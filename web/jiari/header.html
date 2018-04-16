@@ -1,0 +1,112 @@
+
+
+
+<div class="header-content">
+    <div class="wrap clearfix">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
+        </div>
+
+        <!--手机版导航-->
+        <div class="phone-nav">
+            <div class="phone-nav-icon"></div>
+            <div class="phone-menu">
+                <div class="wrap">
+                    <div class="phone-menu-content">
+                        <p><a href="index.html">首页</a></p>
+                        <p><a href="about.html">集团概况</a></p>
+                        <p><a href="news.html">新闻中心</a></p>
+                        <p><a href="brand.html">品牌文化</a></p>
+                        <p><a href="project.html">项目介绍</a></p>
+                        <p><a href="product.html">衍生产品</a></p>
+                        <p><a href="contact-address.html">联系我们</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--搜索-->
+        <div class="search-content">
+            <div class="search-btn"></div>
+            <div class="search-box">
+                <div class="search-box-i">
+                    <form action="">
+                        <input class="search-input" placeholder="搜索" type="text">
+                        <input class="search-submit" type="submit" value="">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--PC版导航-->
+        <div class="header-nav clearfix">
+            <a class="on" href="index.html">首页</a>
+            <a href="about.html">集团概况</a>
+            <a href="news.html">新闻中心</a>
+            <a href="brand.html">品牌中心</a>
+            <a href="project.html">项目介绍</a>
+            <a href="product.html">衍生产品</a>
+            <a href="contact-address.html">联系我们</a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    //搜索框
+    $('.search-btn').click(function (e) {
+        $('.phone-menu').stop().slideUp();
+        if($('.search-box').hasClass('on')){
+            $('.search-box').removeClass('on');
+        }else{
+            $('.search-box').addClass('on');
+            $(document).one("click", function(){
+                $('.search-box').removeClass('on');
+            });
+            e.stopPropagation();
+        }
+    });
+    $('.search-box').on("click", function(e) {
+        e.stopPropagation();
+    });
+
+
+
+    //手机导航下拉
+    $('.phone-nav-icon').click(function (e) {
+        $('.search-box').removeClass('on');
+        $('.search-btn').removeClass('on');
+        if($('.phone-menu').is(":hidden")){
+            $('.phone-menu').stop().slideDown();
+            $(document).one("click", function(){
+                $('.phone-menu').stop().slideUp();
+            });
+            e.stopPropagation();
+
+        }else{
+            $('.phone-menu').stop().slideUp();
+        }
+
+    });
+
+    $('.phone-menu').on("click", function(e) {
+        e.stopPropagation();
+    });
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
