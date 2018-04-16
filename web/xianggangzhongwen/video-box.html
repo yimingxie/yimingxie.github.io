@@ -1,0 +1,44 @@
+
+<div class="video-container">
+    <div class="video-bg"></div>
+    <div class="video-c">
+        <div class="video-close-btn">×</div>
+        <!--<iframe height="400" src='http://player.youku.com/embed/XMzEzNDg5Nzk0MA==' frameborder=0 'allowfullscreen'></iframe>-->
+        <!--<video height="400px" controls="controls" src="test-all.mp4">-->
+            <!--Your browser does not support the video tag.-->
+        <!--</video>-->
+        <iframe height=498 width=100% src="http://player.youku.com/embed/XMTMyNDIzNTYwOA=="
+                allowscriptaccess="always"
+                allowfullscreen="true"
+                wmode="opaque"
+                allowTransparency="true"
+                frameborder="0"
+                type="application/x-shockwave-flash"
+        ></iframe>
+
+    </div>
+</div>
+
+
+
+<script>
+    $(function () {
+
+        //视频居中
+        var h=$('.video-c').height()/2;
+        var w=$('.video-c').width()/2;
+        $('.video-c').css("marginLeft",-w);
+        $('.video-c').css("marginTop",-h);
+
+        //关闭视频
+        $('.video-bg').click(function () {
+            $('.video-box').empty();
+        });
+        $('.video-close-btn').click(function () {
+            $('.video-box').empty();
+        });
+
+
+    })
+</script>
+
