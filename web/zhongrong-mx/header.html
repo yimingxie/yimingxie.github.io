@@ -1,0 +1,40 @@
+
+
+<div class="header-content">
+    <div class="header-title"><a href="index.html">中融数资科技有限公司</a></div>
+
+    <div class="phone-search">
+        <form action="search-result.html">
+            <div class="phone-search-btn"></div>
+            <div class="phone-search-content">
+                <div class="wrap">
+                    <input class="p-search-input1" placeholder="搜索" type="text">
+                    <input class="p-search-submit" type="submit" value="">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        //头部搜索下拉
+        $('.phone-search-btn').click(function (e) {
+            $('.phone-menu-content').hide();
+            if( $('.phone-search-content').is(':hidden')){
+                $('.phone-search-content').stop().slideDown();
+            }else{
+                $('.phone-search-content').stop().slideUp();
+            }
+            $(document).one("click", function(){
+                $('.phone-search-content').stop().slideUp();
+            });
+            e.stopPropagation();
+        });
+        $('.phone-search-content').on("click", function(e) {
+            e.stopPropagation();
+        });
+
+    })
+
+</script>

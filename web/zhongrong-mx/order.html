@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--禁止uc浏览器判断到页面上文字居多时，自动放大字体。-->
+    <meta name="wap-font-scale" content="no">
+    <meta name="author" content="">
+    <title>产品详情</title>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/css-reset.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/swiper-3.3.1.min.js"></script>
+    <script src="js/basic.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+</head>
+<body style="background: #ededed;">
+
+
+<div id="app">
+    <!--头部-->
+    <header></header>
+
+
+    <div class="about-type">
+        <div class="wrap">
+            <div class="about-type-content clearfix">
+                <a class="on" href="order.html">我的订单</a>
+                <a href="order-user.html">个人资料</a>
+                <a href="order-password.html">修改密码</a>
+                <a href="#">安全退出</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="order">
+        <div class="wrap">
+            <div class="order-content">
+                <div class="or-type clearfix">
+                    <span style="width: 14%;">操作</span>
+                    <span style="width: 30%;">商品图片</span>
+                    <span style="width: 56%;">商品信息</span>
+                </div>
+
+                <div class="or-box" v-cloak v-for="(shop, index) in shopListArr">
+                    <table class="or-box-table">
+                        <tr>
+                            <td width="14%">
+                                <div style="text-align: center;">
+                                    <input type="checkbox" :checked="shop.checked" @click="selectSingel(shop)">
+                                </div>
+                            </td>
+                            <td width="30%">
+                                <div class="orb-img">
+                                    <a href="product-detail.html"><img :src="shop.shopImage" alt=""></a>
+                                </div>
+                            </td>
+                            <td width="56%">
+                                <div class="orb-p"><a href="product-detail.html">{{shop.shopName}}</a></div>
+                                <div class="orb-bbt clearfix">
+                                    <div class="orb-price">{{(shop.shopPrice*shop.shopNumber) | priceFormat(shop.shopPrice*shop.shopNumber)}}</div>
+                                    <div class="orb-num clearfix">
+                                        <span class="orb-num-del" @click="numShow(shop, false)">-</span>
+                                        <input type="text" value="shop.shopNumber" v-model="shop.shopNumber">
+                                        <span class="orb-num-add" @click="numShow(shop, true)">+</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="or-box-option">
+                        <a class="orb-option-cancel" href="##" @click="deleteShop(shop)">删除订单</a>
+                        <a class="orb-option-detail" href="order-detail.html">订单详情</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--总计-->
+    <div class="sum-bar clearfix">
+        <div class="sum-bar-input">
+            <input type="checkbox" :checked="isSelectAll" @click="selectAll(isSelectAll)">
+            <span>全选</span>
+        </div>
+        <div class="sum-bar-price">
+            总计：<span>{{totalPrice | priceFormat(totalPrice)}}</span>
+        </div>
+        <div class="sum-bar-btn">
+            <button>结算</button>
+        </div>
+    </div>
+
+
+    <!--底部-->
+    <footer></footer>
+
+
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            //购物车里的数据
+            shopListArr:[],
+            //是否全选
+            isSelectAll: false,
+            //商品总价
+            totalPrice: 0
+        },
+        //dom加载后开始执行
+        mounted(){
+            //“请求本地数据”的方法
+            this.getLocalData();
+        },
+        //过滤器，过滤价格
+        filters: {
+            priceFormat(price){
+                return "¥" + price.toFixed(2);//保留小数点后两位
+            }
+
+        },
+        methods: {
+            //请求本地数据方法
+            getLocalData(){
+                this.$http.get("data/data.json").then(response => {
+                    //请求成功后的回调函数
+                    //this.someDate = response.body;
+                    //console.log(response.body);
+                    const res = response.body;
+                    if(res){
+                        this.shopListArr = res.shopcart;
+                    }
+                },response => {
+                    //请求失败时的回调函数
+                    alert("请求失败");
+                })
+
+            },
+
+            //全选
+            selectAll(flag){
+                //总控制
+                this.isSelectAll = !flag;
+                //遍历，并设置单条商品的选中属性
+                this.shopListArr.forEach((value, index) => {
+                    if(typeof value.checked === "undefined"){
+                        //设置为选中状态
+                        this.$set(value, "checked", !flag);
+                    }else{
+                        value.checked = !flag;
+                    }
+                });
+
+                //调用总价计算的方法
+                this.getTotalPrice();
+            },
+
+            //商品加减
+            numShow(shop, flag){
+                if(flag){   //加
+                    shop.shopNumber += 1;
+
+                }else{    //减
+                    if(shop.shopNumber <= 1){
+                        shop.shopNumber = 1;
+                        return
+                    }
+                    shop.shopNumber -= 1;
+                }
+                //调用总价方法
+                this.getTotalPrice();
+            },
+
+            //总价的计算
+            getTotalPrice(){
+                let ttPrice = 0;
+                this.shopListArr.forEach((value, index) => {
+                    if(value.checked){
+                        ttPrice += value.shopPrice * value.shopNumber;
+                    }
+                });
+                //给data里的总价赋值
+                this.totalPrice = ttPrice;
+            },
+
+            //选中单个商品，并更新总价
+            selectSingel(shop){
+                if(typeof shop.checked === "undefined"){
+                    this.$set(shop, "checked", true);
+                }else{
+                    shop.checked = !shop.checked;
+                }
+
+                //调用总价方法
+                this.getTotalPrice();
+
+                //判断是否全选
+                this.areSelectAll();
+            },
+
+            //判断是否全选中
+            areSelectAll(){
+                let flag = true;
+                this.shopListArr.forEach((value, index) => {
+                    if(!value.checked){
+                        flag = false;
+                    }
+                });
+                //给data的全选赋值
+                this.isSelectAll = flag;
+            },
+            //删除商品
+            deleteShop(shop){
+                //通过索引来删除商品
+                let index = this.shopListArr.indexOf(shop);
+                this.shopListArr.splice(index,1);
+
+                //调用总价方法
+                this.getTotalPrice();
+            }
+
+
+        }
+    })
+
+</script>
+
+
+</body>
+</html>

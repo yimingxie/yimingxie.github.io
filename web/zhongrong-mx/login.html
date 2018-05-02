@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--禁止uc浏览器判断到页面上文字居多时，自动放大字体。-->
+    <meta name="wap-font-scale" content="no">
+    <meta name="author" content="">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/css-reset.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/swiper-3.3.1.min.js"></script>
+    <script src="js/basic.js"></script>
+</head>
+<body>
+
+
+
+
+
+<!--头部-->
+<header></header>
+
+
+<div class="login">
+    <div class="wrap clearfix">
+        <div class="login-content">
+            <form action="order.html">
+                <div class="login-con-title">账号密码登录</div>
+                <div class="login-bc">
+                    <div class="login-box">
+                        <div class="lb-icon lb-icon1"></div>
+                        <input class="login-input1" placeholder="用户名" type="text">
+                    </div>
+                    <div class="login-box">
+                        <div class="lb-icon lb-icon2"></div>
+                        <input class="login-input1" placeholder="密码" type="password">
+                    </div>
+                    <div class="login-choose clearfix">
+                        <div class="login-choose-a">
+                            <a href="find-password1.html">忘记密码？</a>
+                        </div>
+                        <div class="login-choose-input">
+                            <input type="checkbox">下次自动登录
+                        </div>
+                    </div>
+                    <div class="login-submit">
+                        <input type="submit" value="登 录">
+                    </div>
+                    <div class="login-p">还不是跨港通会员？<a href="reg.html">免费注册</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!--底部-->
+<footer></footer>
+
+
+
+<script>
+
+    $(function () {
+        //设置高度
+        var h=$(window).height();
+        $('.login').css("min-height",h-100);
+        $('.reg').css("min-height",h-100);
+
+    })
+
+</script>
+
+
+
+</body>
+</html>

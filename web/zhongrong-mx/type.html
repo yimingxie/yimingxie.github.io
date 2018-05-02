@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--禁止uc浏览器判断到页面上文字居多时，自动放大字体。-->
+    <meta name="wap-font-scale" content="no">
+    <meta name="author" content="">
+    <title>分类</title>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/css-reset.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/swiper-3.3.1.min.js"></script>
+    <script src="js/basic.js"></script>
+</head>
+<body>
+
+
+<!--头部-->
+<header></header>
+
+
+
+<div class="type clearfix">
+    <div class="type-left">
+        <div class="type-t">
+            <div class="type-t-line"></div>
+            <p>品牌</p>
+        </div>
+        <div class="type-t">
+            <div class="type-t-line"></div>
+            <p>价格</p>
+        </div>
+        <div class="type-t">
+            <div class="type-t-line"></div>
+            <p>车型</p>
+        </div>
+    </div>
+
+    <div class="type-right">
+
+        <div class="type-list">
+            <div class="type-list1-content clearfix">
+                <div class="type-brand-box">
+                    <a href="#">
+                        <div class="type-brand-box-img">
+                            <img src="images/tbb1.jpg" alt="">
+                        </div>
+                        <p>宝马</p>
+                    </a>
+                </div>
+                <div class="type-brand-box">
+                    <a href="#">
+                        <div class="type-brand-box-img">
+                            <img src="images/tbb2.jpg" alt="">
+                        </div>
+                        <p>宾利</p>
+                    </a>
+                </div>
+                <div class="type-brand-box">
+                    <a href="#">
+                        <div class="type-brand-box-img">
+                            <img src="images/tbb3.jpg" alt="">
+                        </div>
+                        <p>玛莎拉蒂</p>
+                    </a>
+                </div>
+                <div class="type-brand-box">
+                    <a href="#">
+                        <div class="type-brand-box-img">
+                            <img src="images/tbb4.jpg" alt="">
+                        </div>
+                        <p>路虎</p>
+                    </a>
+                </div>
+                <div class="type-brand-box">
+                    <a href="#">
+                        <div class="type-brand-box-img">
+                            <img src="images/tbb5.jpg" alt="">
+                        </div>
+                        <p>保时捷</p>
+                    </a>
+                </div>
+                <div class="type-brand-box">
+                    <a href="#">
+                        <div class="type-brand-box-img">
+                            <img src="images/tbb6.jpg" alt="">
+                        </div>
+                        <p>奔驰</p>
+                    </a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="type-list">
+            <div class="type-list2-content">
+                <p><a href="#">50万以下<i class="type-list2-icon">&gt;</i></a></p>
+                <p><a href="#">100-150万<i class="type-list2-icon">&gt;</i></a></p>
+                <p><a href="#">150-200万<i class="type-list2-icon">&gt;</i></a></p>
+                <p><a href="#">200-250万<i class="type-list2-icon">&gt;</i></a></p>
+                <p><a href="#">250-300万<i class="type-list2-icon">&gt;</i></a></p>
+                <p><a href="#">300万以上<i class="type-list2-icon">&gt;</i></a></p>
+            </div>
+        </div>
+
+        <div class="type-list">
+            <div class="type-list2-content">
+                <p><a href="#">豪车型<i class="type-list2-icon">&gt;</i></a></p>
+                <p><a href="#">SUV<i class="type-list2-icon">&gt;</i></a></p>
+                <p><a href="#">跑车<i class="type-list2-icon">&gt;</i></a></p>
+                <p><a href="#">MPV<i class="type-list2-icon">&gt;</i></a></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--底部-->
+<footer></footer>
+
+
+<script>
+    $(function () {
+        //左侧高度
+        var h=$(window).height();
+        $('.type-left').css('min-height',h);
+
+        //分类切换
+        $('.type-left .type-t').eq(0).addClass('on');//默认第一个选中
+        $('.type-right .type-list').eq(0).show();
+        $('.type-t').click(function () {
+            var index=$(this).index();
+            $('.type-t').removeClass('on');
+            $(this).addClass('on');
+
+            $('.type-list').hide();
+            $('.type-right .type-list').eq(index).show();
+        });
+
+    })
+
+
+</script>
+
+
+</body>
+</html>

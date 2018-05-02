@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="hotcss" content="initial-dpr=1">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--禁止uc浏览器判断到页面上文字居多时，自动放大字体。-->
+    <meta name="wap-font-scale" content="no">
+    <meta name="author" content="">
+    <title>中融数资科技有限公司</title>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/css-reset.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/swiper-3.3.1.min.js"></script>
+    <script src="js/basic.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+</head>
+
+<body>
+
+
+
+<div id="app">
+    <!--头部-->
+    <header></header>
+
+    <div class="index-banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" v-cloak v-for="(value, index) in bannerArr">
+                    <img :src="value.bannerImage" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <div class="index-link clearfix">
+        <div class="index-link-box">
+            <a href="hot-sale.html">
+                <div class="ilink-icon ilink-icon1"></div>
+                <p>热销精选</p>
+            </a>
+        </div>
+        <div class="index-link-box">
+            <a href="new-car.html">
+                <div class="ilink-icon ilink-icon2"></div>
+                <p>新品上市</p>
+            </a>
+        </div>
+        <div class="index-link-box">
+            <a href="settle.html">
+                <div class="ilink-icon ilink-icon3"></div>
+                <p>商家入驻</p>
+            </a>
+        </div>
+        <div class="index-link-box">
+            <a href="help-center.html">
+                <div class="ilink-icon ilink-icon4"></div>
+                <p>帮助中心</p>
+            </a>
+        </div>
+        <div class="index-link-box">
+            <a href="login.html">
+                <div class="ilink-icon ilink-icon5"></div>
+                <p>会员登录</p>
+            </a>
+        </div>
+        <div class="index-link-box">
+            <a href="question.html">
+                <div class="ilink-icon ilink-icon8"></div>
+                <p>常见问题</p>
+            </a>
+        </div>
+        <div class="index-link-box">
+            <a href="buyer-guide.html">
+                <div class="ilink-icon ilink-icon7"></div>
+                <p>买车指南</p>
+            </a>
+        </div>
+        <div class="index-link-box">
+            <a href="about.html">
+                <div class="ilink-icon ilink-icon6"></div>
+                <p>我的跨港通</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="index-bg">
+        <div class="index-hot">
+            <div class="wrap">
+                <div class="index-title clearfix">
+                    <h3>热销精选</h3>
+                    <a href="hot-sale.html">查看更多 ></a>
+                </div>
+            </div>
+            <div class="index-hot-content">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" v-cloak v-for="value in hotSellArr">
+                            <div class="ih-box">
+                                <a href="product-detail.html">
+                                    <div class="ih-box-img">
+                                        <img :src="value.hotSellImage" alt="">
+                                    </div>
+                                    <div class="ih-box-p">
+                                        <h4>{{value.hotSellH}}</h4>
+                                        <p>{{value.hotSellP}}</p>
+                                        <div class="ih-box-buy">立即抢购 ></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-newcar">
+            <div class="wrap">
+                <div class="index-title clearfix">
+                    <h3>新车上市</h3>
+                    <a href="new-car.html">查看更多 ></a>
+                </div>
+                <div class="index-newcar-content clearfix">
+                    <div class="inc-box" v-cloak v-for="(value, index) in newCarArr">
+                        <a href="product-detail.html">
+                            <div class="inc-box-img">
+                                <img :src="value.newCarImage" alt="">
+                            </div>
+                            <div class="inc-box-p">
+                                <h4>{{value.newCarH}}</h4>
+                                <p>{{value.newCarP}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-brand">
+            <div class="wrap">
+                <div class="index-title clearfix">
+                    <h3>品牌活动</h3>
+                    <a href="brand-car.html">查看更多 ></a>
+                </div>
+                <div class="index-brand-content">
+                    <div class="ib-box clearfix" v-cloak v-for="value in brandArr">
+                        <a href="product-detail.html">
+                            <div class="ib-box-img">
+                                <img :src="value.brandImage" alt="">
+                            </div>
+                            <div class="ib-box-con">
+                                <div class="ib-box-p">
+                                    <h4>{{value.brandH}}</h4>
+                                    <p>{{value.brandP}}</p>
+                                </div>
+                                <div class="ib-box-more">了解更多 ></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-news">
+            <div class="wrap">
+                <div class="index-title clearfix">
+                    <h3>行业资讯</h3>
+                    <a href="news.html">查看更多 ></a>
+                </div>
+                <div class="index-news-content">
+                    <div class="in-box clearfix" v-cloak v-for="value in newsArr">
+                        <a href="news-detail.html">
+                            <div class="in-box-img">
+                                <img :src="value.newsImage" alt="">
+                            </div>
+                            <div class="in-box-p">
+                                <h4>{{value.newsH}}</h4>
+                                <p>{{value.newsP}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<!--底部-->
+<footer></footer>
+
+
+
+
+<script>
+
+    new Vue({
+        el: "#app",
+        data: {
+            //轮播
+            bannerArr: [],
+            //热销
+            hotSellArr: [],
+            //新车
+            newCarArr: [],
+            //品牌活动
+            brandArr: [],
+            //新闻资讯
+            newsArr: []
+
+        },
+        mounted: function(){
+
+            //调用本地请求
+            this.getLocalData();
+
+        },
+        methods: {
+            //请求本地数据
+            getLocalData(){
+                this.$http.get("data/data.json").then(response => {
+                    const res = response.body;
+
+                    if(res){
+
+                        this.bannerArr = res.banner;
+                        this.hotSellArr = res.hotSell;
+                        this.newCarArr = res.newCar;
+                        this.brandArr = res.brand;
+                        this.newsArr = res.news;
+
+                        //swiper可以放这里
+                        this.$nextTick(function () {
+                            //banner轮播
+                            var mySwiper1 = new Swiper ('.index-banner .swiper-container', {
+                                loop: true,
+                                speed: 800,
+                                autoplay: 5000,
+
+                                // 如果需要分页器
+                                pagination: '.index-banner .swiper-pagination',
+                                paginationClickable :true
+                            });
+
+                            //热销精选
+                            var mySwiper2 = new Swiper ('.index-hot-content .swiper-container', {
+                                //autoplay: 5000,
+                                slidesPerView :'auto',
+                            })
+                        });
+
+
+                    }
+
+                },response => {
+                    alert(请求失败);
+                })
+            }
+
+
+        }
+    })
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
