@@ -1,0 +1,139 @@
+{
+  "banner": [
+    {
+      "shopId": "1001",
+      "bannerImage": "images/index-banner1.jpg"
+    },
+    {
+      "shopId": "1002",
+      "bannerImage": "images/index-banner1.jpg"
+    },
+    {
+      "shopId": "1003",
+      "bannerImage": "images/index-banner1.jpg"
+    }
+  ],
+
+  "hotSell": [
+    {
+      "hotSellId": "1",
+      "hotSellH": "保时捷718",
+      "hotSellP": "新车预售即享千元好礼",
+      "hotSellImage": "images/ih-img1.jpg"
+    },
+    {
+      "hotSellId": "2",
+      "hotSellH": "保时捷718",
+      "hotSellP": "新车预售即享千元好礼",
+      "hotSellImage": "images/ih-img2.jpg"
+    },
+    {
+      "hotSellId": "3",
+      "hotSellH": "保时捷718",
+      "hotSellP": "新车预售即享千元好礼",
+      "hotSellImage": "images/ih-img3.jpg"
+    },
+    {
+      "hotSellId": "1",
+      "hotSellH": "保时捷718",
+      "hotSellP": "新车预售即享千元好礼",
+      "hotSellImage": "images/ih-img1.jpg"
+    },
+    {
+      "hotSellId": "2",
+      "hotSellH": "保时捷718",
+      "hotSellP": "新车预售即享千元好礼",
+      "hotSellImage": "images/ih-img2.jpg"
+    },
+    {
+      "hotSellId": "3",
+      "hotSellH": "保时捷718",
+      "hotSellP": "新车预售即享千元好礼",
+      "hotSellImage": "images/ih-img3.jpg"
+    }
+  ],
+
+  "newCar": [
+    {
+      "newCarId": "1",
+      "newCarH": "专业级新中产家庭SUV",
+      "newCarP": "仅需5.46万元",
+      "newCarImage": "images/inc-img1.jpg"
+    },
+    {
+      "newCarId": "1",
+      "newCarH": "专业级新中产家庭SUV",
+      "newCarP": "仅需10.78万元",
+      "newCarImage": "images/inc-img2.jpg"
+    }
+  ],
+
+  "brand": [
+    {
+      "brandId": "1",
+      "brandH": "奔驰 AMG GT",
+      "brandP": "设计美学与强劲动力于一身",
+      "brandImage": "images/ib-img1.jpg"
+    },
+    {
+      "brandId": "2",
+      "brandH": "超跑 Ditreamory",
+      "brandP": "设计美学与强劲动力于一身",
+      "brandImage": "images/ib-img2.jpg"
+    },
+    {
+      "brandId": "3",
+      "brandH": "超跑 AMG GT",
+      "brandP": "设计美学与强劲动力于一身",
+      "brandImage": "images/ib-img3.jpg"
+    }
+  ],
+
+  "news": [
+    {
+      "newsId": "1",
+      "newsH": "跨港通平行进口汽车正式起航",
+      "newsP": "12月3日，小鹏汽车首次在北京挂牌上路,董事长何小...",
+      "newsImage": "images/news1.jpg"
+    },
+    {
+      "newsId": "2",
+      "newsH": "抢滩登陆小型SUV市场，大众丰田谁更强",
+      "newsP": "在本届的北京车展上，大众、斯柯达、丰田都亮相了各自旗下的小型SUV...",
+      "newsImage": "images/news2.jpg"
+    },
+    {
+      "newsId": "3",
+      "newsH": "全新奔驰A级不仅杀同级，还要把C级也逼下台！",
+      "newsP": "全新奔驰A级三厢长轴距轿车这一亮相，不仅秒了同级别...",
+      "newsImage": "images/news3.jpg"
+    }
+  ],
+
+  "shopcart": [
+    {
+      "shopId": "1",
+      "shopName": "奔驰GLE级 2015款 GLE 450 AMG 4MATIC 轿跑SUV(进口)",
+      "shopPrice": 296.00,
+      "shopNumber": 1,
+      "shopImage": "images/orb-img1.png"
+    },
+    {
+      "shopId": "2",
+      "shopName": "奔驰CLA级 2016款 改款 CLA 220 4MATIC(进口)",
+      "shopPrice": 179.00,
+      "shopNumber": 1,
+      "shopImage": "images/orb-img2.png"
+    },
+    {
+      "shopId": "3",
+      "shopName": "宝马X6 2015款 xDrive35i 领先型 准新车 4S保养",
+      "shopPrice": 566.00,
+      "shopNumber": 1,
+      "shopImage": "images/orb-img1.png"
+    }
+
+  ]
+
+
+}
