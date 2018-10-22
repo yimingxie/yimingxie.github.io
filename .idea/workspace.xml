@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a532020-764d-4799-9aa0-a2fd2dcb66c4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.html" afterPath="$PROJECT_DIR$/project.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,8 +29,8 @@
       <file leaf-file-name="project.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="324" column="17" lean-forward="true" selection-start-line="324" selection-start-column="17" selection-end-line="324" selection-end-column="38" />
+            <state relative-caret-position="217">
+              <caret line="323" column="35" lean-forward="true" selection-start-line="323" selection-start-column="35" selection-end-line="323" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -98,11 +98,6 @@
             <path>
               <item name="yimingxie.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="yimingxie.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yimingxie.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yimingxie.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -118,6 +113,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\yimingxie.github.io" />
       <recent name="D:\WebstormProjects\yimingxie.github.io\web\kuagangtong-vue" />
       <recent name="D:\WebstormProjects\yimingxie.github.io\js" />
     </key>
@@ -144,12 +140,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540197608000</updated>
-      <workItem from="1540197609480" duration="2490000" />
+      <workItem from="1540197609480" duration="3140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2490000" />
+    <option name="totallyTimeSpent" value="3140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -202,8 +198,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="324" column="17" lean-forward="true" selection-start-line="324" selection-start-column="17" selection-end-line="324" selection-end-column="38" />
+        <state relative-caret-position="217">
+          <caret line="323" column="35" lean-forward="true" selection-start-line="323" selection-start-column="35" selection-end-line="323" selection-end-column="35" />
           <folding />
         </state>
       </provider>
