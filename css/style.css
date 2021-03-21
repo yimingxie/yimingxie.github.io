@@ -211,7 +211,7 @@
     background: #ddd;
 }
 .project-content{
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .project-box{
     position: relative;
@@ -231,6 +231,7 @@
 .project-box-img{
     position: relative;
     overflow: hidden;
+    border: 1px solid #ddd;
 }
 .project-box-img img{
     width: 100%;
@@ -334,7 +335,39 @@
     color: #007aff;
     text-decoration: underline;
 }
-
+.project-nav{
+    margin-top: 40px;
+}
+.project-nav-a{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 22px;
+    color: #999;
+    margin-right: 30px;
+    transition: all 1s;
+}
+.project-nav-a a{
+    color: #999;
+}
+.project-nav-a.on::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    background: #000;
+}
+.project-nav-a.on a,.project-nav-a:hover a{
+    color: #000;
+}
+.project-item{
+    margin-top: 40px;
+}
+.project-item-title{
+    text-align: center;
+    font-size: 20px;
+}
 
 
 
@@ -399,6 +432,8 @@
     .about-box{margin-top: 40px;}
     .about-box-title{font-size: 18px;}
     .about-box-p{font-size: 14px;line-height: 24px;margin-top: 16px;}
+    .project-nav-a{font-size: 18px;}
+    .project-item-title{font-size: 16px;}
 }
 
 /*适配4寸以下手机*/
