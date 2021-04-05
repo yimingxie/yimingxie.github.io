@@ -16,6 +16,8 @@
   <script src="js/jquery.lazyload.js"></script>
   <script src="js/idangerous.swiper.min.js"></script>
   <script src="js/basic.js"></script>
+  <script src="js/lodash.min.js"></script>
+
 
 
   <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
@@ -204,11 +206,16 @@
 
 
 <script>
-
   $(function () {
-
     //滚动监控添加动画
     new setAnimation(50);
+    function imgResize() {
+      var radio = 385 / 250
+      var imgDOM = $('.project-box-img')
+      imgDOM.height(imgDOM.width() / radio)
+    }
+    imgResize()
+    $(window).on('resize', _.debounce(imgResize, 1000, {trailing: true}))
 
     // 图片懒加载
     $("img.lazy").lazyload({
@@ -216,10 +223,7 @@
       effect: "fadeIn",
       threshold: 100
     })
-
   })
-
-
 </script>
 
 

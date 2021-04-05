@@ -232,6 +232,8 @@
     position: relative;
     overflow: hidden;
     border: 1px solid #ddd;
+    background: url('../images/loading2.gif') no-repeat center;
+    background-size: cover;
 }
 .project-box-img img{
     width: 100%;
