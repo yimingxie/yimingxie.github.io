@@ -204,14 +204,6 @@
 
 
 <script>
-  
-function fn(){
-	var a = 3;
-	return function(){
-		return  ++a;                                     
-	}
-}
-console.log(fn()())
 
   $(function () {
 
@@ -220,6 +212,7 @@ console.log(fn()())
 
     // 图片懒加载
     $("img.lazy").lazyload({
+      placeholder : "images/loading2.gif",
       effect: "fadeIn",
       threshold: 100
     })
